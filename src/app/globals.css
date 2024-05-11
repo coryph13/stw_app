@@ -2,7 +2,147 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
+    --background: white;
+    --foreground: #2f3f4f;
+}
+
+.dark {
+    --background: #2f3f4f;
+    --foreground: white;
+}
+
+/*
+ * Underline Reversed (.ur)
+**/
+.ur {
+    display: inline-block;
+    padding-bottom:2px;
+    background-position: 0 100%; /*OR bottom left*/
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.3s,
+      background-position 0s 0.3s; /*change after the size immediately*/
+}
+.ur.ur-dark {
+    background-image: linear-gradient(#414649 0 0);
+}
+.ur.ur-white {
+    background-image: linear-gradient(#fff 0 0);
+}
+.dark .ur.ur-dark {
+    background-image: linear-gradient(#fff 0 0);
+}
+.dark .ur.ur-white {
+    background-image: linear-gradient(#414649 0 0);
+}
+
+.ur:hover {
+    background-position: 100% 100%; /*OR bottom right*/
+    background-size: 100% 2px;
+}
+/* header {
+    background: url(/assets/background-dark.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+} */
+
+/* 
+    Mobile 800x1200
+    Fullscreen 1200x500
+    #0F0E0E
+    #262524
+    #6B6660
+    #45413E
+    #94908A
+*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/background-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.hero-button {
+    background-color: #262524;
+    color: white;
+    border: 1px solid #45413E;
+    margin-top: 5rem;
+    padding: 0.9375rem 1.875rem;
+    font-size: 1.125rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: #45413E;
+    border: 1px solid #6B6660;
+}
+
+/* .logo {
+    transition: .2s;
+}
+
+.logo.logo-filled {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
+}
+
+.logo.logo-filled:hover {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.dark .logo.logo-filled {
+    filter: drop-shadow(3px 5px 2px rgb(255 255 255 / 0.4));
+}
+
+.dark .logo.logo-filled:hover {
+    filter: drop-shadow(3px 5px 2px rgb(255 255 255 / 0.3));
+} */
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +170,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
