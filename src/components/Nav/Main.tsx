@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiAlignLeft, FiAlignRight, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import Search from "@/components/Search";
 
 export default function Main() {
     const [nav, setNav] = useState(false);
@@ -68,7 +69,9 @@ export default function Main() {
                 </ul>
 
                 <div className="hidden md:flex items-center justify-between md:w-auto w-full">    
-                    <FiSearch className="cursor-pointer w-6 h-6 mr-2"></FiSearch>
+                    <button>
+                        <Search></Search>
+                    </button>
                 </div>
             </div>
         </nav>

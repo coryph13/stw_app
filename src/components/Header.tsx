@@ -9,7 +9,9 @@ export default function Header () {
                 <div className="lg:container lg:mx-auto">
                     <ul className="flex flex-row-reverse list-none">
                         <li className="p-2">
-                            <ThemeSwitch />
+                            <button>
+                                <ThemeSwitch />
+                            </button>
                         </li>
                         <li className="p-2">
                             <Link className="ur ur-white text-sm" href="/contact-us">

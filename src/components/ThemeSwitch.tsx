@@ -1,7 +1,6 @@
 'use client'
 
 import { FiSun, FiMoon } from "react-icons/fi"
-import { IoIosColorFilter } from "react-icons/io";
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 
