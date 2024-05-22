@@ -8,8 +8,8 @@ export default function Header () {
             <div className="hidden md:block bg-oxblue-950 dark:bg-white text-white dark:text-oxblue-950">
                 <div className="lg:container lg:mx-auto">
                     <ul className="flex flex-row-reverse list-none">
-                        <li className="p-2">
-                            <button>
+                        <li>
+                            <button className="p-2">
                                 <ThemeSwitch />
                             </button>
                         </li>

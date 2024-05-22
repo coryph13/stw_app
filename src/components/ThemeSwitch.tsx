@@ -11,14 +11,15 @@ export default function ThemeSwitch() {
     useEffect(() => setMounted(true), [])
 
     if (!mounted) {
-        return <FiSun className="animate-spin w-6 h-6 mr-2"/>
+        // return null;
+        return <FiSun className="animate-spin w-6 h-6 mr-4 md:mr-0"/>
     }
     
     if (resolvedTheme === 'dark') {
-        return <FiSun className="hover:animate-spin cursor-pointer w-6 h-6 mr-2" onClick={() => setTheme('light')} />
+        return <FiSun className="hover:animate-spin cursor-pointer w-6 h-6 mr-4 md:mr-0" onClick={() => setTheme('light')} />
     }
     
     if (resolvedTheme === 'light') {
-        return <FiMoon className="hover:animate-pulse cursor-pointer w-6 h-6 mr-2" onClick={() => setTheme('dark')} />
+        return <FiMoon className="hover:animate-pulse cursor-pointer w-6 h-6 mr-4 md:mr-0" onClick={() => setTheme('dark')} />
     }
 }
