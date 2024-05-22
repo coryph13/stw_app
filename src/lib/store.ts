@@ -6,6 +6,8 @@ export const searchStore = () => {
         reducer: {
             searching: searchSlice
         },
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware({ serializableCheck: false }),
     });
 };
 

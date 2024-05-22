@@ -2,7 +2,7 @@
 
 import { createContext } from "react";
 import { ThemeProvider } from "next-themes"
-import StoreProvider from "@/lib/StoreProvider";
+import StoreProvider from "@/lib/providers/StoreProvider";
 
 export function Providers({ 
     children 
