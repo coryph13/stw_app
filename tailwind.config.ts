@@ -10,6 +10,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+    },
     extend: {
       colors: {
         'abbey' : {

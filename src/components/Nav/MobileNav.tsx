@@ -1,24 +1,28 @@
+'use client'
 // Logo with text
 
-import LogoFilled from "@/ui/LogoFilled";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { FiMenu, FiSearch, FiX } from "react-icons/fi";
-import ThemeSwitch from "@/components/ThemeSwitch";
-import SearchButton from "@/components/SearchButton";
+import FilledLogo from "@/components/Logo/FilledLogo";
+import { Locale } from "@/config";
+import { FiMenu, FiX } from "react-icons/fi";
+import ThemeSwitch from "@/components/Button/ThemeSwitch";
+import SearchButton from "@/components/Button/SearchButton";
+import React from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
-export default function Main() {
-    const [nav, setNav] = useState(false);
+export default function MobileNav() {
+    const [nav, setNav] = React.useState(false);
+    const t = useTranslations('MobileMenu');
+    const locale = useLocale() as Locale;
 
     const handleNav = () => {
         setNav(!nav);
     };
 
     const navItems = [
-        { key: 1, link: 'products', text: 'Products' },
-        { key: 2, link: 'decors',   text: 'Decors' },
-        { key: 3, link: 'purposes', text: 'Purposes' },
+        { key: 1, link: 'products', text: t('Products') },
+        { key: 2, link: 'decors',   text: t('Decors') },
+        { key: 3, link: 'purposes', text: t('Purposes') },
     ];
 
     return (
@@ -26,7 +30,7 @@ export default function Main() {
             <div className="lg:container lg:mx-auto flex w-full flex-wrap items-center justify-between h-20">
                 <div className="flex items-center justify-between md:w-auto w-full">
                     <a href="/" className="flex items-center py-5 px-2 flex-1">
-                        <LogoFilled className="logo logo-filled h-8 fill-oxblue-800 dark:fill-white mb-2" />
+                        <FilledLogo className="logo logo-filled h-8 fill-oxblue-800 dark:fill-white mb-2" />
                     </a>
 
                     {/* Mobile Navbar Button */}

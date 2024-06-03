@@ -1,17 +1,6 @@
-'use client'
+import { redirect } from "next/dist/server/api-utils";
 
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Main from "@/components/Nav/Main";
-import Search from "@/components/Search";
-
-export default function Home() {
-    return (
-        <>
-            <Header />
-            <Main />
-            <Hero />
-            <Search />
-        </>
-    );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+    redirect('/ru');
 }

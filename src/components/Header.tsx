@@ -1,6 +1,6 @@
-import ThemeSwitch from "@/components/ThemeSwitch";
-import LogoFilled from "@/ui/LogoFilled";
+import ThemeSwitch from "@/components/Button/ThemeSwitch";
 import Link from "next/link";
+import LocaleSwitch from "./Select/LocaleSwitch";
 
 export default function Header () {
     return (
@@ -19,9 +19,7 @@ export default function Header () {
                             </Link>
                         </li>
                         <li className="p-2">
-                            <Link className="ur ur-white text-sm" href="/">
-                                English
-                            </Link>
+                            <LocaleSwitch />
                         </li>
                     </ul>
                 </div>

@@ -1,8 +1,7 @@
 'use client'
 
-import { createContext } from "react";
+import SearchBarProvider from "@/context/SearchBarContext";
 import { ThemeProvider } from "next-themes"
-import StoreProvider from "@/lib/providers/StoreProvider";
 
 export function Providers({ 
     children 
@@ -10,11 +9,11 @@ export function Providers({
     children: React.ReactNode
 }) {
     return (
-        <StoreProvider>
-            <ThemeProvider attribute="class" defaultTheme="light" >
+        <ThemeProvider attribute="class" defaultTheme="light" >
+            <SearchBarProvider>
                 {children}
-            </ThemeProvider>
-        </StoreProvider>
+            </SearchBarProvider>
+        </ThemeProvider>
     );
 };
 

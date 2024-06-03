@@ -1,0 +1,24 @@
+{
+    "IndexPage": {
+        "title": "Website STW Group"
+    },
+    "Search": {
+        "Input": {
+            "placeholder": "Search..."
+        }
+    },
+    "Manifest": {
+        "name": "Website STW Group"
+    },
+    "LocaleLayout": {
+        "title": "Website STW Group"
+    },
+    "LocaleSwitch": {
+        "locale": "{locale, select, ru {Russian} en {English} uz {Uzbek} other {Unknown}}"
+    },
+    "MobileMenu": {
+        "Products": "Products",
+        "Decors": "Decors",
+        "Purposes": "Purposes"
+    }
+}
