@@ -13,8 +13,8 @@ const LocaleSwitch = ({}: {}) => {
     const locale = useLocale()
     const params = useParams();
 
-    const changeLocale = (newLocale: Locale) => {
-        router.replace({pathname}, { locale: newLocale });
+    const changeLocale = (nextLocale: Locale) => {
+        router.replace({pathname}, { locale: nextLocale });
     }
 
     return (

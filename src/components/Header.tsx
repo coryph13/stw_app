@@ -1,5 +1,5 @@
 import ThemeSwitch from "@/components/Button/ThemeSwitch";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import LocaleSwitch from "./Select/LocaleSwitch";
 
 export default function Header () {
