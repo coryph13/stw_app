@@ -14,7 +14,7 @@ export interface IProduct {
 
     media: {
         photo: IMedia,
-        design: IMedia
+        design?: IMedia
     };
 
     manufacturer: IManufacturer;
@@ -26,7 +26,7 @@ export interface IProduct {
     usages: IUsage[];
 }
 
-interface IProductProps {
+export interface IProductList {
     products: IProduct[];
 }
 

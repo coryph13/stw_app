@@ -4,6 +4,7 @@ export interface IMedia {
     thumb: string;
     original: string;
 }
+
 // export type Media = {
 //     large: string;
 //     medium: string;
