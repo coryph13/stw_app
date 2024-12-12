@@ -1,17 +1,10 @@
-import createMiddleware from "next-intl/middleware";
-import {locales, pathnames, localePrefix, defaultLocale } from "@/config";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-export default createMiddleware({
-    locales,
-    defaultLocale,
-    // pathnames,
-    localePrefix
-});
+export function middleware(request: NextRequest) {
+    return NextResponse;
+}
 
 export const config = {
-    matcher: [
-        // '/',
-        // '/(ru|en|uz)/:path*'
-        "/((?!api|_next|_vercel|.*\\..*).*)",
-    ]
+    matcher: '/product/:slug',
 }

@@ -1,6 +1,7 @@
-import { redirect } from "next/dist/server/api-utils";
+import { SignupForm } from "@/ui/signup-form";
 
-// This page only renders when the app is built statically (output: 'export')
-export default function RootPage() {
-    redirect('/ru');
+export default async function Page() {
+    return (
+        <SignupForm />
+    );
 }
