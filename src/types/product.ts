@@ -14,7 +14,7 @@ export interface IProduct {
 
     media: {
         photo: IMedia,
-        design?: IMedia
+        design: IMedia
     };
 
     manufacturer: IManufacturer;

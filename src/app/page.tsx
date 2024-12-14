@@ -1,7 +1,33 @@
-import { SignupForm } from "@/ui/signup-form";
+// import { SignupForm } from "@/ui/signup-form";
+
+import { getProducts } from "@/lib/products";
+import { IProduct } from "@/types/product";
+import Card from "@/ui/components/Card";
 
 export default async function Page() {
+
+    const products = await getProducts();
+
+    // console.log(products);
+    // console.log(products[0].media);
+
+    // for (const p in products) {
+    //     let product = products[p];
+    //     console.log(product);
+    //     console.log(product.media);
+    // }
+
     return (
-        <SignupForm />
+        <div>
+            <h1>
+                Main Page
+            </h1>
+            <div>
+                {products.map((entity: IProduct) => (
+                    <Card key={entity.slug} title={entity.name} description={entity.description} media={entity.media.photo} />
+                ))}
+            </div>
+        </div>
+        // <SignupForm />
     );
 }
