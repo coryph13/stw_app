@@ -1,14 +1,10 @@
 'use client'
 
-import { signup } from "@/lib/auth";
+import { login } from "@/lib/auth";
 
-export function SignupForm() {
+export function LoginForm() {
     return (
-        <form action={signup}>
-            <div>
-                <label htmlFor="name">Name</label>
-                <input id="name" name="name" placeholder="Name" />
-            </div>
+        <form action={login}>
             <div>
                 <label htmlFor="login">Email</label>
                 <input id="login" name="login" type="text" placeholder="Email or Phone Number" />
@@ -17,7 +13,7 @@ export function SignupForm() {
                 <label htmlFor="password">Password</label>
                 <input id="password" name="password" type="password" />
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit">Login</button>
         </form>
-    )
+    );
 }
