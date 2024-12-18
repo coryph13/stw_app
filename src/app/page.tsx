@@ -24,7 +24,7 @@ export default async function Page() {
             </h1>
             <div>
                 {products.map((entity: IProduct) => (
-                    <Card key={entity.slug} title={entity.name} description={entity.description} media={entity.media.photo} />
+                    <Card key={entity.slug} entity={entity} type="product"/>
                 ))}
             </div>
         </div>
