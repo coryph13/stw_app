@@ -7,6 +7,7 @@ export interface ICard {
     description: string;
     media: {
         photo: IMedia;
+        design?: IMedia;
     };
     tags?: ITag[];
     isFavorite: boolean;

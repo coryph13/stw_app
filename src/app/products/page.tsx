@@ -1,8 +1,8 @@
-import Products from '@/pages/Products';
+import ProductsCollection from "@/ui/components/ProductsCollection";
 
 export default async function Page() {
     return (
-        <Products />
+        <ProductsCollection />
     )
 }
 
