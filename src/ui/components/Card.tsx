@@ -25,6 +25,8 @@ export default function Card({ entity, type }: IProps) {
         }
     ];
 
+    console.log(entity.media.photo.medium);
+    
     return (
         <div className="group relative max-w-sm rounded overflow-hidden shadow-lg">
             <ToggleFavBtn active={entity.isFavorite} />
@@ -36,7 +38,7 @@ export default function Card({ entity, type }: IProps) {
                     src={entity.media.photo.medium}
                     alt={entity.name} />
                 {entity.media.design != undefined &&
-                    <Image className="w-full object-cover opacity-0 group-hover:opacity-100"
+                <Image className="w-full object-cover opacity-0 group-hover:opacity-100"
                         width={640}
                         height={640}
                         src={entity.media.design.medium}
@@ -45,9 +47,7 @@ export default function Card({ entity, type }: IProps) {
             </Link>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{entity.name}</div>
-                <p className="text-gray-700 text-base">
-                    {entity.description}
-                </p>
+                <p className="text-gray-700 text-base" dangerouslySetInnerHTML={{ __html: entity.description }} ></p>
             </div>
             <div className="px-6 pt-4 pb-2">
                 {entity.tags.map((tag: ITag, i: number) => (
