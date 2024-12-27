@@ -5,6 +5,7 @@ import Tag from "@/ui/components/Tag";
 import Link from "next/link";
 import ToggleFavBtn from "@/ui/components/ToggleFavBtn";
 import { ICard } from "@/types/card";
+import { genApiUrlFromPath } from "@/utils/uri";
 
 interface IProps {
     entity: ICard;
@@ -14,17 +15,19 @@ interface IProps {
 
 export default function Card({ entity, type }: IProps) {
 
-    entity.tags = [
-        {
-            name: 'Gray',
-            slug: 'gray',
-        },
-        {
-            name: 'Wood',
-            slug: 'wood',
-        }
-    ];
+    // test purpose
+    // entity.tags = [
+    //     {
+    //         name: 'Gray',
+    //         slug: 'gray',
+    //     },
+    //     {
+    //         name: 'Wood',
+    //         slug: 'wood',
+    //     }
+    // ];
 
+    // test purpose
     let _url = `http://stw.test/${type}/${entity.slug}`;
     let _img_link = (
         <Link href={_url}
@@ -32,7 +35,7 @@ export default function Card({ entity, type }: IProps) {
             <Image className="w-full object-cover"
                 width={640}
                 height={640}
-                src={entity.media.photo.medium}
+                src={genApiUrlFromPath(entity.media.photo.medium)}
                 // overrideSrc={entity.media.photo.medium}
                 alt={entity.name} />
         </Link>
@@ -45,14 +48,14 @@ export default function Card({ entity, type }: IProps) {
                 <Image className="w-full object-cover opacity-100 group-hover:opacity-0"
                     width={640}
                     height={640}
-                    src={entity.media.photo.medium}
+                    src={genApiUrlFromPath(entity.media.photo.medium)}
                     // overrideSrc={entity.media.photo.medium}
                     alt={entity.name} />
                 {entity.media.design != undefined &&
                 <Image className="w-full object-cover opacity-0 group-hover:opacity-100"
                         width={640}
                         height={640}
-                        src={entity.media.design.medium}
+                        src={genApiUrlFromPath(entity.media.design.medium)}
                         alt={entity.name} />
                 }
             </Link>
@@ -64,7 +67,7 @@ export default function Card({ entity, type }: IProps) {
             <ToggleFavBtn active={entity.isFavorite} />
             {_img_link}
             <div className="px-6 py-4">
-                <Link className="font-bold text-xl mb-4 hover:opacity-50" href={_url}>{entity.name}</Link>
+                <Link className="block mb-2 mt-2 font-bold text-xl hover:opacity-50" href={_url}>{entity.name}</Link>
                 <p className="text-gray-700 text-base" dangerouslySetInnerHTML={{ __html: entity.description }} ></p>
             </div>
             <div className="px-6 pt-4 pb-2">
