@@ -5,11 +5,11 @@ import Card from "./Card";
 export default async function ProductsCollection() {
     const products = await getProducts();
 
-    products.push(products[0]);
-    products.push(products[0]);
-    products.push(products[0]);
-    products.push(products[0]);
-    products.push(products[0]);
+    // products.push(products[0]);
+    // products.push(products[0]);
+    // products.push(products[0]);
+    // products.push(products[0]);
+    // products.push(products[0]);
 
     return (
         <section>
@@ -76,7 +76,7 @@ export default async function ProductsCollection() {
                     </div>
                 </div>
                 <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {products.map((entity: IProduct) => (
+                {Array.isArray(products) && products.map((entity: IProduct) => (
                     <li key={entity.slug}>
                         <Card entity={entity} />
                     </li>

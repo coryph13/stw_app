@@ -3,16 +3,25 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: [
-        'api.stw.test'
-    ],
+    // domains: [
+    //     'api.stw.test'
+    // ],
+    // remotePatterns: [
+    //     {
+    //         protocol: 'http',
+    //         hostname: 'api.stw.test',
+    //         // hostname: '**',
+    //         port: '',
+    //         // pathname: '/**',
+    //         // search: '',
+    //     }
+    // ],
     remotePatterns: [
         {
             protocol: 'http',
-            hostname: 'api.stw.test',
-            port: '80',
-            pathname: '/**',
-            search: '',
+            hostname: '**',
+            port: '',
+            pathname: '**',
         }
     ]
   }

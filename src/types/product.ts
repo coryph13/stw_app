@@ -24,6 +24,8 @@ export interface IProduct {
 
     features: IFeature[];
     usages: IUsage[];
+
+    isFavorite: boolean;
 }
 
 export interface IProductList {
