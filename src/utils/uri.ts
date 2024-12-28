@@ -17,3 +17,5 @@ export function genApiUrlFromPath(path: string): string
 
     return url.toString();
 }
+
+
