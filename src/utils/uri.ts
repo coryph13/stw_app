@@ -1,4 +1,5 @@
 import { env } from "process";
+import baseApiUrl from '@/config';
 
 // const domain = env('API_DOMAIN'); // Get from config
 const domain = 'api.stw.test';
@@ -9,13 +10,11 @@ const forceHttps = false;
 
 export function genApiUrlFromPath(path: string): string
 {
-    let urlStr = forceHttps ? 'https://' : 'http://';
-    urlStr += domain;
-    urlStr += path;
+    const url = new URL(baseApiUrl + path);
 
-    const url = new URL(urlStr);
+    return url.href;
 
-    return url.toString();
+    // return url.toString();
 }
 
 

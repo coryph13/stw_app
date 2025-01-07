@@ -1,5 +1,8 @@
 import "@/styles/globals.css";
+import Footer from "@/ui/landmarks/footer";
+import Header from "@/ui/landmarks/header";
 import { Roboto } from "next/font/google";
+import { use } from "react"
 
 const roboto = Roboto({
     weight: ['100', '300', '400', '500', '700', '900'],
@@ -10,22 +13,40 @@ const bodyClassName = `${roboto.className} bg-white`;
 
 export default function RootLayout({
     children,
-}: Readonly <{
-    children: React.ReactNode
+    params
+}: Readonly<{
+    children: React.ReactNode,
+    params: Promise<{ locale: string }>,
 }>) {
+    const { locale } = use(params);
+    
     return (
-        <html lang="en">
+        <html lang={locale}>
             <head>
 
             </head>
             <body className={bodyClassName}>
-                {/* <Container>
-                    <Row>
-                        <Col> */}
-                            {children}
-                        {/* </Col>
-                    </Row>
-                </Container> */}
+                <header>
+                    <nav>
+                        <ul>
+                            <li>Главная</li>
+                            <li>О нас</li>
+                            <li>Контакты</li>
+                        </ul>
+                    </nav>
+                </header>
+                {/* <Header /> */}
+                <main>
+                    {children}
+                </main>
+                {/* <Footer /> */}
+                <footer>
+                    <p>&copy; 2025 STW. Все права защищены.</p>
+                    <nav>
+                        <li>Политика конфиденциальности</li>
+                        <li>Условия использования</li>
+                    </nav>
+                </footer>
             </body>
         </html>
     );

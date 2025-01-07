@@ -18,16 +18,15 @@ export default async function Page() {
     // }
 
     return (
-        <div>
-            <h1>
-                Main Page
-            </h1>
-            <div>
+        <>
+            {/* <h1>Главная</h1>
+            <section>
+                <h2>Продукты</h2>
                 {products.map((entity: IProduct) => (
                     <Card key={entity.slug} entity={entity} type="product"/>
                 ))}
-            </div>
-        </div>
+            </section> */}
+        </>
         // <SignupForm />
     );
 }

@@ -4,17 +4,15 @@
 // export const currentLocale = 'en' as const;
 // export const baseUrl = process.env.BASE_URL!;
 
-
-
-const config = {
+export default {
     // baseUrl: process.env.NEXT_SERVER_BASE_URL!,
     // baseApiUrl: process.env.NEXT_SERVER_BASE_API_URL!,
     baseUrl: process.env.NEXT_PUBLIC_BASE_URL!,
     baseApiUrl: process.env.NEXT_PUBLIC_BASE_API_URL!,
-    locale: 'en',
+    defaultLocale: 'en',
+    locales: ['uz', 'ru', 'en'],
+    matcher: ['/', '/(uz|ru|en)/:path'],
 }
 
-console.log(config);
-
-export default config;
+// export default config;
 

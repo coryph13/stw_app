@@ -1,6 +1,7 @@
 'use client'
 
-import config from '@/config'
+import locale from '@/config'
+import baseApiUrl from '@/config'
 import { storeToken } from "@/lib/auth";
 import { IToken } from "@/types/token";
 import { IUser } from "@/types/user";
@@ -11,7 +12,7 @@ export async function sign_up(formData: FormData) {
     // export async function getProducts(): Promise<IProductList> {
     // const locale = currentLocale; // await and set to localStorage
 
-    const _uri = new URL('/v1/auth/sign_up', config.baseApiUrl);
+    const _uri = new URL('/v1/auth/sign_up', baseApiUrl);
     const response = await fetch(
         _uri.href,
         {
@@ -19,7 +20,7 @@ export async function sign_up(formData: FormData) {
             body: JSON.stringify(Object.fromEntries(formData)),
             headers: {
                 "Content-Type": "application/json",
-                "Content-Language": config.locale
+                "Content-Language": locale
             },
             cache: 'force-cache',
             next: {

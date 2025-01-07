@@ -6,14 +6,15 @@ import Link from "next/link";
 import ToggleFavBtn from "@/ui/components/buttons/ToggleFavBtn";
 import { ICard } from "@/types/card";
 import { genApiUrlFromPath } from "@/utils/uri";
-import '@/config';
+import { baseApiUrl } from '@/config'
+
 interface IProps {
     entity: ICard;
     type: string;
 };
 
 
-export default function Card({ entity, type, href: URL }: IProps) {
+export default function Card({ entity, type }: IProps) {
     // const _url = new URL(`${type}/${entity.slug}`, baseUrl);
 
     console.log()
@@ -33,10 +34,8 @@ export default function Card({ entity, type, href: URL }: IProps) {
     // test purpose
     let baseUrl = new URL(`${type}/${entity.slug}`, baseApiUrl);
 
-    console.log(baseUrl)
-
     let _img_link = (
-        <Link href={baseUrl.origin}
+        <Link href={baseUrl.href}
             className="relative h-[350px] sm:h-[450px]">
             <Image className="w-full object-cover"
                 width={640}
@@ -73,7 +72,7 @@ export default function Card({ entity, type, href: URL }: IProps) {
             <ToggleFavBtn active={entity.isFavorite} />
             {_img_link}
             <div className="px-6 py-4">
-                <Link className="block mb-2 mt-2 font-bold text-xl hover:opacity-50" href={baseUrl}>{entity.name}</Link>
+                <Link className="block mb-2 mt-2 font-bold text-xl hover:opacity-50" href={baseUrl.href}>{entity.name}</Link>
                 <p className="text-gray-700 text-base" dangerouslySetInnerHTML={{ __html: entity.description }} ></p>
             </div>
             <div className="px-6 pt-4 pb-2">
