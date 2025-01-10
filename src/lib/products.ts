@@ -1,20 +1,16 @@
-// export async function getProducts() {
-//     const data = await fetch(
-//         'http://api.stw.test/v1/product/all',
-//         {
-//             method: "POST"
-//         }
-//     );
 
+
+import { baseApiUrl, defaultLocale } from "@/config";
 import { IProduct } from "@/types/product";
 import { IProductList } from "@/types/product";
 // import { revalidateTag } from "next/cache";
 
-export async function getProducts(): Promise<IProductList> {
-    const locale = 'en'; // await and set to localStorage
-
+export async function getProducts(
+    locale: string
+): Promise<IProductList> {
+    const url = new URL('/product/list', baseApiUrl);
     const response = await fetch(
-        `http://api.stw.test/v1/product/list`,
+        url.href,
         {
             method: "POST",
             headers: {
@@ -37,17 +33,29 @@ export async function getProducts(): Promise<IProductList> {
     return data;
 }
 
-export async function getProduct(productSlug: string): Promise<IProduct> {
+export async function getProduct(
+    slug: string,
+    locale: string
+): Promise<IProduct> {
+    const url = new URL(`product/${slug}`, baseApiUrl);
     const response = await fetch(
-        `http://api.stw.test/v1/product/${productSlug}`, // TODO: Replace with config uri.
+        url.href,
         {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Content-Language": "en"
+                "Content-Language": locale
+            },
+            next: {
+                revalidate: 3600,
+                tags: ['product'],
             }
         }
     );
+
+    if (!response.ok) {
+        throw new Error('Failed to submit the data. Please try again.')
+    }
 
     const data: IProduct = await response.json();
 

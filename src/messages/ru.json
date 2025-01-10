@@ -1,0 +1,18 @@
+{
+    "Search": {
+        "placeholder": "Поиск продукта..."
+    },
+    "ProductReviews": {
+        "heading": "Отзывы"
+    },
+    "Hello": {
+        "greeting": "Привет"
+    },
+    "NotFound": {
+        "heading": "Страница не найдена!"
+    },
+    "Product": {
+        "name": "Наименование",
+        "description": "Описание"
+    }
+}

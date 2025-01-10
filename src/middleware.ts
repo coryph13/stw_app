@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import locales from '@/config';
-import defaultLocale from '@/config';
+import { locales, defaultLocale } from '@/config';
 import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator';
 
@@ -38,7 +37,7 @@ function redirectRequestWithLocale(request: NextRequest) {
 }
 
 function getLocale({ headers }: NextRequest) {
-    let languages = new Negotiator({
+    const languages = new Negotiator({
         headers: { 'accept-language': headers.get('accept-language') },
     }).languages();
 
@@ -50,4 +49,11 @@ function getLocale({ headers }: NextRequest) {
     return match(languages, locales, defaultLocale);
 
     // headers.get('accept-language');
+}
+
+export const config = {
+    matcher: [
+        '/',
+        '/(uz|ru|en)/:path*'
+    ]
 }

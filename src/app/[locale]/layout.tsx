@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
-import Footer from "@/ui/landmarks/footer";
-import Header from "@/ui/landmarks/header";
+// import Footer from "@/ui/landmarks/footer";
+// import Header from "@/ui/landmarks/header";
 import { Roboto } from "next/font/google";
 import { use } from "react"
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     params: Promise<{ locale: string }>,
 }>) {
     const { locale } = use(params);
-    
+
     return (
         <html lang={locale}>
             <head>

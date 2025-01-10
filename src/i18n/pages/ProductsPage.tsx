@@ -1,17 +1,15 @@
 import { getProducts } from "@/lib/products";
-import { IProduct } from "@/types/product";
-import Card from "./Card";
+import { IProduct, IProductList } from "@/types/product";
+import Card from "../../ui/components/Card";
+import { baseUrl } from "@/config";
 
-export default async function ProductsCollection() {
-    const products = await getProducts();
+// TODO: Rename with ProductsPage
 
-    // products.push(products[0]);
-    // products.push(products[0]);
-    // products.push(products[0]);
-    // products.push(products[0]);
-    // products.push(products[0]);
-
-    console.log(products);
+export default function ProductsPage({
+    entities
+}: {
+    entities: IProductList
+}) {
 
     return (
         <section>
@@ -78,9 +76,10 @@ export default async function ProductsCollection() {
                     </div>
                 </div>
                 <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {Array.isArray(products) && products.map((entity: IProduct) => (
+                {Array.isArray(entities) && entities.map((entity: IProduct) => (
                     <li key={entity.slug}>
-                        <Card entity={entity} />
+                        <Card entity={entity}
+                            url={new URL(`/product/${entity.slug}`, baseUrl)} />
                     </li>
                 ))}
                 </ul>

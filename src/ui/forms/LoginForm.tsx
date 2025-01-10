@@ -1,13 +1,16 @@
 'use client'
 
 import { login } from "@/actions/auth";
+import { useParams } from "next/navigation";
 import React, { useState, FormEvent } from "react";
 
 // type Error = {
 //     message: string;
 // }
 
-export function LoginForm() {
+export function LoginForm({
+    params
+}) {
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [error, setError] = useState<string | null>(null)
 
@@ -18,13 +21,13 @@ export function LoginForm() {
         setError(null);
 
         try {
-            const response = await login(new FormData(event.currentTarget));
+            const response = await login(new FormData(event.currentTarget), locale);
 
             const data = await response.json();
-            console.log(data, localStorage.getItem('token'));
-        } catch (error) {
-            setError(error.message)
-            console.log(error);
+            // console.log(data, localStorage.getItem('token'));
+        } catch (e) {
+            setError(error)
+            console.log(e);
         } finally {
             setIsLoading(false);
         }

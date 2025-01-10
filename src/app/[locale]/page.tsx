@@ -1,12 +1,12 @@
 // import { SignupForm } from "@/ui/signup-form";
 
-import { getProducts } from "@/lib/products";
-import { IProduct } from "@/types/product";
-import Card from "@/ui/components/Card";
+// import { getProducts } from "@/lib/products";
+// import { IProduct } from "@/types/product";
+// import Card from "@/ui/components/Card";
 
 export default async function Page() {
 
-    const products = await getProducts();
+    // const products = await getProducts();
 
     // console.log(products);
     // console.log(products[0].media);

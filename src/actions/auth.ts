@@ -1,26 +1,22 @@
 'use client'
 
-import locale from '@/config'
-import baseApiUrl from '@/config'
+import { defaultLocale, baseApiUrl } from '@/config'
 import { storeToken } from "@/lib/auth";
 import { IToken } from "@/types/token";
-import { IUser } from "@/types/user";
-import { revalidateTag } from "next/cache";
+// import { IUser } from "@/types/user";
+// import { revalidateTag } from "next/cache";
 
 
-export async function sign_up(formData: FormData) {
-    // export async function getProducts(): Promise<IProductList> {
-    // const locale = currentLocale; // await and set to localStorage
-
-    const _uri = new URL('/v1/auth/sign_up', baseApiUrl);
+export async function sign_up(formData: FormData, locale: string) {
+    const url = new URL('/auth/sign_up', baseApiUrl);
     const response = await fetch(
-        _uri.href,
+        url.href,
         {
             method: "POST",
             body: JSON.stringify(Object.fromEntries(formData)),
             headers: {
                 "Content-Type": "application/json",
-                "Content-Language": locale
+                "Content-Language": defaultLocale
             },
             cache: 'force-cache',
             next: {
@@ -44,18 +40,16 @@ export async function sign_up(formData: FormData) {
     return response;
 }
 
-export async function login(formData: FormData) {
-    const _uri = new URL('/v1/auth/login', config.baseApiUrl);
-    console.log(_uri);
+export async function login(formData: FormData, locale: string) {
+    const url = new URL('/auth/login', baseApiUrl);
     const response = await fetch(
-        // `http://api.stw.test/v1/auth/login`,
-        _uri.href,
+        url.href,
         {
             method: "POST",
             body: JSON.stringify(Object.fromEntries(formData)),
             headers: {
                 "Content-Type": "application/json",
-                "Content-Language": config.locale
+                "Content-Language": locale
             },
             cache: 'force-cache',
             next: {
