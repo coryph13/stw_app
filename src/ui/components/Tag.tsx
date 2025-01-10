@@ -1,5 +1,5 @@
 import { ITag } from "@/types/tag";
-import Link from "next/link";
+import LocaleLink from "@/ui/components/locale-link";
 
 interface IProps {
     entity: ITag;
@@ -7,6 +7,8 @@ interface IProps {
 
 export default function Tag({ entity }: IProps) {
     return (
-        <Link href={`/tags/${entity.slug}`} className={`inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2`}>{entity.name}</Link>
+        <LocaleLink href={`/tags/${entity.slug}`} className={`inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2`}>
+            {entity.name}
+        </LocaleLink>
     );
 }

@@ -53,7 +53,8 @@ function getLocale({ headers }: NextRequest) {
 
 export const config = {
     matcher: [
-        '/',
-        '/(uz|ru|en)/:path*'
+        // '/',
+        // '/(uz|ru|en)/:path*',
+        "/((?!api|_next/static|_next/image|favicon.ico).*)"
     ]
 }

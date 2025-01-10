@@ -5,7 +5,8 @@
 //     initTWE,
 //   } from "tw-elements";
 
-import Link from "next/link";
+import LocaleLink from "@/ui/components/locale-link";
+
 
 //   initTWE({ Collapse, Ripple });
 
@@ -18,7 +19,7 @@ export default function Header() {
                         <a className="block text-white dark:text-black text-center py-14 px-16 no-udnerline" href="#">LOGO</a>
                     </li>
                     <li className="float-left">
-                        <Link className="block text-white dark:text-black text-center py-14 px-16 no-udnerline" href={'/products'}>Products</Link>
+                        <LocaleLink className="block text-white dark:text-black text-center py-14 px-16 no-udnerline" href={'/product'}>Products</LocaleLink>
                     </li>
                     <li className="float-left">
                         <a className="block text-white dark:text-black text-center py-14 px-16 no-udnerline" href="#">About</a>

@@ -79,7 +79,7 @@ export default function ProductsPage({
                 {Array.isArray(entities) && entities.map((entity: IProduct) => (
                     <li key={entity.slug}>
                         <Card entity={entity}
-                            url={new URL(`/product/${entity.slug}`, baseUrl)} />
+                            href={`/product/${entity.slug}`} />
                     </li>
                 ))}
                 </ul>

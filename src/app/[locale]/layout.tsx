@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import LocaleLink from "@/ui/components/locale-link";
 // import Footer from "@/ui/landmarks/footer";
 // import Header from "@/ui/landmarks/header";
 import { Roboto } from "next/font/google";
@@ -32,6 +33,12 @@ export default function RootLayout({
                             <li>Главная</li>
                             <li>О нас</li>
                             <li>Контакты</li>
+                            <li>
+                                <LocaleLink
+                                    href={'/product'}>
+                                    Продукты
+                                </LocaleLink>
+                            </li>
                         </ul>
                     </nav>
                 </header>

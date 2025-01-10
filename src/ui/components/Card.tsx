@@ -2,67 +2,67 @@
 import { ITag } from "@/types/tag";
 import Image from "next/image";
 import Tag from "@/ui/components/Tag";
-import Link from "next/link";
 import ToggleFavBtn from "@/ui/components/buttons/ToggleFavBtn";
 import { ICard } from "@/types/card";
 import { genApiUrlFromPath } from "@/utils/uri";
 import Photo from "./Photo";
 import { EMedia } from "@/types/media";
+import LocaleLink from "@/ui/components/locale-link";
 
 interface IProps {
     entity: ICard;
-    url: URL;
+    href: string;
 };
 
-export default function Card({ entity, url }: IProps) {
-    let _img_link = (
-        <Link href={url.href}
-            className="relative h-[350px] sm:h-[450px]">
-            <Image className="w-full object-cover"
-                width={640}
-                height={640}
-                src={genApiUrlFromPath(entity.media.photo.medium)}
-                // overrideSrc={entity.media.photo.medium}
-                alt={entity.name} />
-        </Link>
-    );
+export default function Card({ entity, href }: IProps) {
+    // let _img_link = (
+    //     <LocaleLink href={url.href}
+    //         className="relative h-[350px] sm:h-[450px]">
+    //         <Image className="w-full object-cover"
+    //             width={640}
+    //             height={640}
+    //             src={genApiUrlFromPath(entity.media.photo.medium)}
+    //             // overrideSrc={entity.media.photo.medium}
+    //             alt={entity.name} />
+    //     </LocaleLink>
+    // );
 
-    if (entity.media.design != undefined) {
-        _img_link = (
-            <Link href={url.href}
-                className="relative h-[350px] sm:h-[450px]">
-                <Image className="w-full object-cover opacity-100 group-hover:opacity-0"
-                    width={640}
-                    height={640}
-                    src={genApiUrlFromPath(entity.media.photo.medium)}
-                    // overrideSrc={entity.media.photo.medium}
-                    alt={entity.name} />
-                {entity.media.design != undefined &&
-                    <Image className="w-full object-cover opacity-0 group-hover:opacity-100"
-                        width={640}
-                        height={640}
-                        src={genApiUrlFromPath(entity.media.design.medium)}
-                        alt={entity.name} />
-                }
-            </Link>
-        );
-    }
+    // if (entity.media.design != undefined) {
+    //     _img_link = (
+    //         <LocaleLink href={url.href}
+    //             className="relative h-[350px] sm:h-[450px]">
+    //             <Image className="w-full object-cover opacity-100 group-hover:opacity-0"
+    //                 width={640}
+    //                 height={640}
+    //                 src={genApiUrlFromPath(entity.media.photo.medium)}
+    //                 // overrideSrc={entity.media.photo.medium}
+    //                 alt={entity.name} />
+    //             {entity.media.design != undefined &&
+    //                 <Image className="w-full object-cover opacity-0 group-hover:opacity-100"
+    //                     width={640}
+    //                     height={640}
+    //                     src={genApiUrlFromPath(entity.media.design.medium)}
+    //                     alt={entity.name} />
+    //             }
+    //         </LocaleLink>
+    //     );
+    // }
 
     return (
         <div className="group relative max-w-sm rounded overflow-hidden shadow-lg">
             <ToggleFavBtn active={entity.isFavorite} />
-            <Link
+            <LocaleLink
                 className="relative h-[350px] sm:h-[450px]"
-                href={url.href}>
+                href={href}>
                 <Photo
                     className="w-full object-cover"
                     media={entity.media.photo}
                     dimension={EMedia.LARGE}
                     alt={entity.name} />
-            </Link>
+            </LocaleLink>
             <div className="px-6 py-4">
-                <Link className="block mb-2 mt-2 font-bold text-xl hover:opacity-50"
-                    href={url.href}>{entity.name}</Link>
+                <LocaleLink className="block mb-2 mt-2 font-bold text-xl hover:opacity-50"
+                    href={href}>{entity.name}</LocaleLink>
                 <p className="text-gray-700 text-base" dangerouslySetInnerHTML={{ __html: entity.description }} ></p>
             </div>
             <div className="px-6 pt-4 pb-2">
