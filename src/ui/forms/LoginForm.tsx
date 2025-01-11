@@ -1,6 +1,7 @@
 'use client'
 
 import { login } from "@/actions/auth";
+import { getLocale } from "next-intl/server";
 import { useParams } from "next/navigation";
 import React, { useState, FormEvent } from "react";
 
@@ -16,6 +17,8 @@ export function LoginForm({
 
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
+
+        const locale = await getLocale();
 
         setIsLoading(true);
         setError(null);

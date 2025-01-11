@@ -1,19 +1,20 @@
-
-
 import { baseApiUrl, defaultLocale } from "@/config";
 import { IProduct } from "@/types/product";
 import { IProductList } from "@/types/product";
+import { getLocale } from "next-intl/server";
 // import { revalidateTag } from "next/cache";
 
-export async function getProducts(
-    locale: string
-): Promise<IProductList> {
+export async function getProducts(): Promise<IProductList> {
+    const locale = await getLocale();
     const url = new URL('/product/list', baseApiUrl);
+    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnN0dy50ZXN0L2F1dGgvbG9naW4iLCJpYXQiOjE3MzY1ODM1NzIsImV4cCI6MTczNjU4NzE3MiwibmJmIjoxNzM2NTgzNTcyLCJqdGkiOiJmNXZlUTc5R1I2SU81Qjk3Iiwic3ViIjoiMiIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.QqCnr81ciI30smzxFooEzH8aAJHYqDavbJ5QZCNvfcU';
+
     const response = await fetch(
         url.href,
         {
             method: "POST",
             headers: {
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json",
                 "Content-Language": locale
             },
@@ -34,10 +35,10 @@ export async function getProducts(
 }
 
 export async function getProduct(
-    slug: string,
-    locale: string
+    slug: string
 ): Promise<IProduct> {
     const url = new URL(`product/${slug}`, baseApiUrl);
+    const locale = await getLocale();
     const response = await fetch(
         url.href,
         {

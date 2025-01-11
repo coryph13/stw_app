@@ -11,8 +11,17 @@
     "NotFound": {
         "heading": "Страница не найдена!"
     },
-    "Product": {
+    "Nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "blog": "Блог",
+        "products": "Продукты"
+    },
+    "ProductPage": {
         "name": "Наименование",
         "description": "Описание"
+    },
+    "ProductsPage": {
+        "description": "Описание страницы Продукты"
     }
 }

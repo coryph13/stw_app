@@ -1,15 +1,16 @@
 import { getProducts } from "@/lib/products";
 import { IProduct, IProductList } from "@/types/product";
 import Card from "../../ui/components/Card";
-import { baseUrl } from "@/config";
-
+import { useTranslations } from "next-intl";
 // TODO: Rename with ProductsPage
+
 
 export default function ProductsPage({
     entities
 }: {
     entities: IProductList
 }) {
+    const t = useTranslations('ProductsPage');
 
     return (
         <section>
@@ -18,8 +19,7 @@ export default function ProductsPage({
                     <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">Products</h2>
 
                     <p className="mt-4 max-w-md text-gray-500">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-                        dicta incidunt est ipsam, officia dolor fugit natus?
+                        {t('description')}
                     </p>
                 </header>
                 <div className="mt-8 flex items-center justify-between">
@@ -79,11 +79,20 @@ export default function ProductsPage({
                 {Array.isArray(entities) && entities.map((entity: IProduct) => (
                     <li key={entity.slug}>
                         <Card entity={entity}
-                            href={`/product/${entity.slug}`} />
+                            href={`/product/${entity.slug}`}
+                            type={`product`} />
                     </li>
                 ))}
                 </ul>
             </div>
         </section>
+    )
+}
+
+export function ProductSkeleton() {
+    return (
+        <>
+
+        </>
     )
 }

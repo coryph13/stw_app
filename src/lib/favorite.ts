@@ -1,0 +1,47 @@
+'use server';
+
+import { baseApiUrl } from "@/config";
+import { getLocale } from "next-intl/server";
+
+interface IFavoriteToggle {
+    isActive: boolean;
+}
+
+export async function toggleFavorite(
+    slug: string,
+    type: string
+): Promise<IFavoriteToggle> {
+
+    const url = new URL(`favorite/toggle`, baseApiUrl);
+    const locale = await getLocale();
+
+    // test purposes, take it from storage
+    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnN0dy50ZXN0L2F1dGgvbG9naW4iLCJpYXQiOjE3MzY1ODc4ODksImV4cCI6MTczNjU5MTQ4OSwibmJmIjoxNzM2NTg3ODg5LCJqdGkiOiJxVDBnSmcyZVp3ekNtZXpVIiwic3ViIjoiMiIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cjcEO8eunRjrJjfR4XiPYkwzHnTIBGX6hOx0M5VNO1k';
+    const body = JSON.stringify({ slug, type });
+
+    const response = await fetch(
+        url.href,
+        {
+            method: "POST",
+            body: body,
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Content-Language": locale
+            },
+            // next: {
+            //     revalidate: 3600,
+            //     tags: ['product'],
+            // }
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error('Failed to submit the data. Please try again.')
+    }
+
+    const data: IFavoriteToggle = await response.json();
+
+    return data;
+}

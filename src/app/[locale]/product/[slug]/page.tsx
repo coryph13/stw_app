@@ -13,7 +13,7 @@ export default async function Page({
     const {slug, locale} = await params;
 
     try {
-        const entity = await getProduct(slug, locale);
+        const entity = await getProduct(slug);
 
         return (
             <ProductPage entity={entity} />

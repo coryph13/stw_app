@@ -9,8 +9,7 @@ export default async function Page({
         slug: string;
     }>
 }) {
-    const { locale } = await params;
-    const entities = await getProducts(locale);
+    const entities = await getProducts();
 
     return (
         <ProductsPage entities={entities}/>

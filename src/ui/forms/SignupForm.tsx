@@ -17,7 +17,7 @@ export function SignupForm() {
             const response = await sign_up(new FormData(event.currentTarget));
 
             const data = await response.json();
-            console.log(data, localStorage.getItem('token'));
+            // console.log(data, localStorage.getItem('token'));
         } catch (e) {
             setError(error)
             console.log(e);

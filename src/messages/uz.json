@@ -12,10 +12,10 @@
         "heading": "Page not found!"
     },
     "Nav": {
-        "home": "Home",
-        "about": "About",
-        "blog": "Blog",
-        "products": "Products"
+        "home": "Главная",
+        "about": "О нас",
+        "blog": "Блог",
+        "products": "Продукты"
     },
     "ProductPage": {
         "name": "Name",

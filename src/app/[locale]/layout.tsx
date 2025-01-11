@@ -1,7 +1,9 @@
+import { Link } from "@/i18n/routing";
 import "@/styles/globals.css";
-import LocaleLink from "@/ui/components/locale-link";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 // import Footer from "@/ui/landmarks/footer";
-// import Header from "@/ui/landmarks/header";
+import Header from "@/ui/landmarks/header";
 import { Roboto } from "next/font/google";
 import { use } from "react"
 
@@ -12,14 +14,15 @@ const roboto = Roboto({
 
 const bodyClassName = `${roboto.className} bg-white`;
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
     params
 }: Readonly<{
     children: React.ReactNode,
     params: Promise<{ locale: string }>,
 }>) {
-    const { locale } = use(params);
+    const { locale } = await params;
+    const messages = await getMessages();
 
     return (
         <html lang={locale}>
@@ -27,22 +30,23 @@ export default function RootLayout({
 
             </head>
             <body className={bodyClassName}>
-                <header>
+                <NextIntlClientProvider messages={messages}>
+                {/* <header>
                     <nav>
                         <ul>
                             <li>Главная</li>
                             <li>О нас</li>
                             <li>Контакты</li>
                             <li>
-                                <LocaleLink
+                                <Link
                                     href={'/product'}>
                                     Продукты
-                                </LocaleLink>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
-                </header>
-                {/* <Header /> */}
+                </header> */}
+                <Header />
                 <main>
                     {children}
                 </main>
@@ -54,6 +58,7 @@ export default function RootLayout({
                         <li>Условия использования</li>
                     </nav>
                 </footer>
+                </NextIntlClientProvider>
             </body>
         </html>
     );
