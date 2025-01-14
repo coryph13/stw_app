@@ -3,6 +3,7 @@
 import { defaultLocale, baseApiUrl } from '@/config'
 import { storeToken } from "@/lib/auth";
 import { IToken } from "@/types/token";
+import { NextResponse } from 'next/server';
 // import { IUser } from "@/types/user";
 // import { revalidateTag } from "next/cache";
 
@@ -66,6 +67,12 @@ export async function login(formData: FormData, locale: string) {
     const token: IToken = await response.json();
 
     storeToken(token);
+
+    response.cookies.set({
+        name: 'tokens',
+        path: '/',
+        value: JSON.stringify(token),
+    });
 
     return response;
 }

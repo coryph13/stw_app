@@ -4,7 +4,6 @@ import Card from "../../ui/components/Card";
 import { useTranslations } from "next-intl";
 // TODO: Rename with ProductsPage
 
-
 export default function ProductsPage({
     entities
 }: {
@@ -79,7 +78,7 @@ export default function ProductsPage({
                 {Array.isArray(entities) && entities.map((entity: IProduct) => (
                     <li key={entity.slug}>
                         <Card entity={entity}
-                            href={`/product/${entity.slug}`}
+                            href={`/products/${entity.slug}`}
                             type={`product`} />
                     </li>
                 ))}

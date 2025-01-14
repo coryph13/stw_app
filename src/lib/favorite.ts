@@ -12,11 +12,11 @@ export async function toggleFavorite(
     type: string
 ): Promise<IFavoriteToggle> {
 
-    const url = new URL(`favorite/toggle`, baseApiUrl);
+    const url = new URL(`favorites/toggle`, baseApiUrl);
     const locale = await getLocale();
 
     // test purposes, take it from storage
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnN0dy50ZXN0L2F1dGgvbG9naW4iLCJpYXQiOjE3MzY1ODc4ODksImV4cCI6MTczNjU5MTQ4OSwibmJmIjoxNzM2NTg3ODg5LCJqdGkiOiJxVDBnSmcyZVp3ekNtZXpVIiwic3ViIjoiMiIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.cjcEO8eunRjrJjfR4XiPYkwzHnTIBGX6hOx0M5VNO1k';
+    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnN0dy50ZXN0L2F1dGgvbG9naW4iLCJpYXQiOjE3MzY4Mzc4MjUsImV4cCI6MTczNjg0MTQyNSwibmJmIjoxNzM2ODM3ODI1LCJqdGkiOiJNQVo5dU9aVDlzNmNkZ3cwIiwic3ViIjoiMiIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.Ivx5elFNiBl_7C_oL-dHbW82dbV6eOdq6a2ZrgsdBxE';
     const body = JSON.stringify({ slug, type });
 
     const response = await fetch(
@@ -36,6 +36,8 @@ export async function toggleFavorite(
             // }
         }
     );
+
+    // console.log(await response.text());
 
     if (!response.ok) {
         throw new Error('Failed to submit the data. Please try again.')

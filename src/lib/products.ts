@@ -6,8 +6,8 @@ import { getLocale } from "next-intl/server";
 
 export async function getProducts(): Promise<IProductList> {
     const locale = await getLocale();
-    const url = new URL('/product/list', baseApiUrl);
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnN0dy50ZXN0L2F1dGgvbG9naW4iLCJpYXQiOjE3MzY1ODM1NzIsImV4cCI6MTczNjU4NzE3MiwibmJmIjoxNzM2NTgzNTcyLCJqdGkiOiJmNXZlUTc5R1I2SU81Qjk3Iiwic3ViIjoiMiIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.QqCnr81ciI30smzxFooEzH8aAJHYqDavbJ5QZCNvfcU';
+    const url = new URL('/products', baseApiUrl);
+    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnN0dy50ZXN0L2F1dGgvbG9naW4iLCJpYXQiOjE3MzY4Mzc1MzYsImV4cCI6MTczNjg0MTEzNiwibmJmIjoxNzM2ODM3NTM2LCJqdGkiOiIwWGQ1VDh6bG54NlhoUUNzIiwic3ViIjoiMiIsInBydiI6ImI5MTI3OTk3OGYxMWFhN2JjNTY3MDQ4N2ZmZjAxZTIyODI1M2ZlNDgifQ.FyxOjD7cPJd8q6-2_VHd-NpRCwlX-XfnvdpsXXihQEE';
 
     const response = await fetch(
         url.href,
@@ -21,10 +21,12 @@ export async function getProducts(): Promise<IProductList> {
             cache: 'force-cache',
             next: {
                 revalidate: 3600,
-                tags: ['user'],
+                tags: ['user', 'product'],
             },
         }
     )
+
+    // console.log(await response.text());
 
     // TODO: Revalidate products, decors, collections due to Favorites and Views Count.
     // revalidateTag('user');
@@ -37,7 +39,7 @@ export async function getProducts(): Promise<IProductList> {
 export async function getProduct(
     slug: string
 ): Promise<IProduct> {
-    const url = new URL(`product/${slug}`, baseApiUrl);
+    const url = new URL(`products/${slug}`, baseApiUrl);
     const locale = await getLocale();
     const response = await fetch(
         url.href,
