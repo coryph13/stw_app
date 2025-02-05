@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { HeartIcon } from "@heroicons/react/24/solid";
-import { toggleFavorite } from "@/lib/favorite";
+import { toggleFavorite } from "@/lib/fetch/favorite";
 
 interface IFavoriteButton {
     entity: {

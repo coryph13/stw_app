@@ -8,10 +8,13 @@ import IconSrcEn from 'flag-icons/flags/4x3/gb.svg';
 import IconSrcRu from 'flag-icons/flags/4x3/ru.svg';
 import IconSrcUz from 'flag-icons/flags/4x3/uz.svg';
 import Image from "next/image";
+import { useLocale } from "next-intl";
 
 export default function LocaleDropdown({ ...props }) {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const locale = useLocale();
+    console.log(locale);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -22,6 +25,8 @@ export default function LocaleDropdown({ ...props }) {
         { code: 'ru', label: 'Русский', src: IconSrcRu },
         { code: 'en', label: 'English', src: IconSrcEn },
     ];
+
+    let localeClassname = "flex w-full justify-between items-center px-4 py-3 text-md";
 
     return (
         <div className="flex space-x-10 text-white">
@@ -41,23 +46,23 @@ export default function LocaleDropdown({ ...props }) {
 
                 {isOpen && (
                     <div
-                        className="absolute right-0 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-black"
+                        className="absolute right-0 mt-2 w-44 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-black"
                         role="menu"
                         aria-orientation="vertical"
                         tabIndex={-1}
                     >
-                        <div className="py-1" role="none">
+                        <div className="" role="none">
                             {Locales.map((localeItem) => (
                                 <Link
-                                    className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    className={localeItem.code !== locale ? localeClassname + ' text-gray-700 hover:bg-gray-700 hover:text-white' : localeClassname + ' text-white bg-gray-700'}
                                     key={localeItem.code}
                                     // href={pathname}
                                     href={'/'}
                                     locale={localeItem.code}>
-                                    <span className="mr-2">
-                                        <Image src={localeItem.src} width="25" height="15" alt={localeItem.label}/>
+                                    <span>
+                                        <Image src={localeItem.src} width="25" height="19" alt={localeItem.label} />
                                     </span>
-                                    {localeItem.label}
+                                    <span className="h-[19px]">{localeItem.label}</span>
                                 </Link>
                             ))}
                         </div>

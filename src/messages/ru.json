@@ -15,7 +15,8 @@
         "home": "Главная",
         "about": "О нас",
         "blog": "Блог",
-        "products": "Продукты"
+        "products": "Продукты",
+        "contacts": "Контакты"
     },
     "ProductPage": {
         "name": "Наименование",

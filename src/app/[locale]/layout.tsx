@@ -1,18 +1,11 @@
-import { Link } from "@/i18n/routing";
-import "@/styles/globals.css";
+import "@/styles/tailwind.css";
+import "@/app/globals.css";
+import { roboto } from "@/lib/fonts/roboto";
+
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-// import Footer from "@/ui/landmarks/footer";
-import Header from "@/ui/landmarks/header";
-import { Roboto } from "next/font/google";
-import { use } from "react"
+import Header from "@/components/layout/Header";
 
-const roboto = Roboto({
-    weight: ['100', '300', '400', '500', '700', '900'],
-    subsets: ['latin', 'cyrillic']
-});
-
-const bodyClassName = `${roboto.className} bg-white`;
 
 export default async function RootLayout({
     children,
@@ -25,42 +18,24 @@ export default async function RootLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
-            <head>
+        <NextIntlClientProvider messages={messages}>
+            <html lang={locale}>
+                <head>
 
-            </head>
-            <body className={bodyClassName}>
-                <NextIntlClientProvider messages={messages}>
-                {/* <header>
-                    <nav>
-                        <ul>
-                            <li>Главная</li>
-                            <li>О нас</li>
-                            <li>Контакты</li>
-                            <li>
-                                <Link
-                                    href={'/product'}>
-                                    Продукты
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </header> */}
-                <Header />
-                <main>
-                    {children}
-                </main>
-                {/* <Footer /> */}
-                <footer>
-                    <p>&copy; 2025 STW. Все права защищены.</p>
-                    <nav>
-                        <li>Политика конфиденциальности</li>
-                        <li>Условия использования</li>
-                    </nav>
-                </footer>
-                </NextIntlClientProvider>
-            </body>
-        </html>
+                </head>
+                <body className={`${roboto.className} flex flex-col min-h-screen`}>
+
+                    <Header />
+                    <main className={`flex-grow container mx-auto p-4`}>
+                        {children}
+                    </main>
+                    {/* <Footer /> */}
+                    <footer className="bg-gray-800 text-white text-center p-4 mt-4">
+                        <p>&copy; 2025 STW. Все права защищены.</p>
+                    </footer>
+                </body>
+            </html>
+        </NextIntlClientProvider >
     );
 }
 

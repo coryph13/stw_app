@@ -1,5 +1,5 @@
 import ProductPage from "@/i18n/pages/ProductPage";
-import { getProduct } from "@/lib/products";
+import { getProduct } from "@/lib/fetch/products";
 import { notFound } from "next/navigation";
 
 export default async function Page({

@@ -31,11 +31,3 @@ export interface IProduct {
 export interface IProductList {
     products: IProduct[];
 }
-
-// export type Product = {
-//     slug: string;
-//     name: string;
-//     description: string;
-//     // media: [IMedia];
-//     media: [Media]
-// }
