@@ -1,6 +1,6 @@
 import { getProducts } from "@/lib/fetch/products";
 import { IProduct, IProductList } from "@/types/product";
-import Card from "../../ui/Card";
+import Card from "../../components/ui/Card";
 import { useTranslations } from "next-intl";
 // TODO: Rename with ProductsPage
 
