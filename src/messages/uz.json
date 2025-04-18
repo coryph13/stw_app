@@ -13,7 +13,9 @@
         "about": "О нас",
         "blog": "Блог",
         "products": "Продукты",
-        "contacts": "Контакты"
+        "contacts": "Контакты",
+        "login": "Войти",
+        "sign-up": "Регистрация"
     },
     "ProductReviews": {
         "heading": "Reviews"

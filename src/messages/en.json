@@ -16,7 +16,9 @@
         "about": "About",
         "blog": "Blog",
         "products": "Products",
-        "contacts": "Contacts"
+        "contacts": "Contacts",
+        "login": "Login",
+        "sign-up": "Sign Up"
     },
     "ProductPage": {
         "name": "Name",

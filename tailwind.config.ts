@@ -33,6 +33,11 @@ export default {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                primary: '#D8CDB5',    // Тёплый бежевый
+                dark: '#2E2B27',       // Тёмный серо-коричневый
+                accent: '#A18755',     // Латунный
+                light: '#F4F1EA',      // Светлый фон
+                hover: '#3A3733',      // Цвет при наведении
             },
             // spacing: {
             //     '128': '32rem',

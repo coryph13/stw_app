@@ -1,20 +1,29 @@
 'use client';
 
-import LocaleDropdown from './LocaleDropdown';
+import LocaleDropdown from '@/components/layout/LocaleDropdown';
 import NavLinks from './NavLinks';
 import Logo from './Logo';
 import SearchBtn from './SearchBtn';
 
 import { IoMdClose } from 'react-icons/io';
 import { IoMdMenu } from 'react-icons/io';
-import Link from 'next/link';
-import { useState } from 'react';
-import { Btn } from '../ui/Btn';
+// import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Btn } from '@/components/ui/Btn';
+import { useTranslations } from 'next-intl';
+import { usePathname } from '@/i18n/routing';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const t = useTranslations('Nav');
 
-  const textColor = `text-gray-300 hover:text-black dark:text-white dark:hover:text-gray-300`;
+  const textClass = `text-dark hover:text-accent dark:text-white dark:hover:text-gray-300`;
+
+  useEffect(() => {
+    // Закрываем меню при изменении маршрута
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     // <nav className="fixed flex h-16 w-full items-center justify-between bg-gray-900 px-4">
@@ -25,52 +34,45 @@ export const Navbar = () => {
     //   {/* <ProfileDropdown /> */}
     // </nav>
     <nav
-      className={`bg-white p-4 shadow-md shadow-black dark:bg-black dark:shadow-white`}
+      className={`bg-light p-4 shadow-md shadow-dark dark:bg-dark dark:shadow-light`}
     >
       <div className="container mx-auto flex items-center justify-between">
         <Logo />
 
-        <div className="hidden space-x-6 md:flex">
-          <Link
-            href="/"
-            className={`${textColor}`}
-          >
-            Home
-          </Link>{' '}
-          <Link
-            href="/about"
-            className={`${textColor}`}
-          >
-            About
-          </Link>
+        <div className={`hidden space-x-6 md:flex`}>
+          <NavLinks textClass={`${textClass}`} />
         </div>
 
-        <div className="hidden md:flex space-x-4">
-          <Btn variant="outline">Login</Btn>
-          <Btn>Sign Up</Btn>
+        <LocaleDropdown />
+        
+        <div className="hidden space-x-4 md:flex">
+          <Btn variant="outline">{t('login')}</Btn>
+          <Btn>{t('sign-up')}</Btn>
         </div>
 
-        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="text-light md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? (
-            <IoMdClose className={`${textColor}`} size={`1.5rem`} />
+            <IoMdClose className={`${textClass}`} size={`1.5rem`} />
           ) : (
-            <IoMdMenu className={`${textColor}`} size={`1.5rem`} />
+            <IoMdMenu className={`${textClass}`} size={`1.5rem`} />
           )}
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden flex flex-col space-y-4 mt-4 text-center">
-          <Link href="/" className={`${textColor}`}>Home</Link>
-          <Link href="/about" className={`${textColor}`}>About</Link>
-          <Btn variant="outline">Login</Btn>
-          <Btn>Sign Up</Btn>
+        <div className="mt-4 flex flex-col space-y-4 text-center md:hidden">
+          <NavLinks textClass={`${textClass}`} />
+
+          <Btn variant="outline">{t('login')}</Btn>
+          <Btn>{t('sign-up')}</Btn>
         </div>
       )}
     </nav>
   );
 };
-
 
 // import { useState } from "react";
 // import { Menu, X } from "lucide-react";

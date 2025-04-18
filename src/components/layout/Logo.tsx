@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-<div className="text-2xl font-bold text-black dark:text-white">
+<div className="text-2xl font-bold text-dark dark:text-white">
 <Link href="/">STW</Link>
 </div>
 

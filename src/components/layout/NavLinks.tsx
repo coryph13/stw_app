@@ -1,13 +1,13 @@
 'use client';
 
 import { Link, usePathname } from '@/i18n/routing';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
-export default function NavLinks() {
+export default function NavLinks({ textClass = '' }) {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
-
   const t = useTranslations('Nav');
+  const locale = useLocale();
 
   const NavLinks = [
     { id: 1, name: t('home'), path: '/' },
@@ -16,24 +16,32 @@ export default function NavLinks() {
     { id: 4, name: t('products'), path: '/products' },
     { id: 5, name: t('contacts'), path: '/contacts' },
   ];
+
   return (
-    <ul className="flex flex-1 space-x-10 text-white list-none">
+    <>
       {NavLinks.map(link => {
         return (
-          <li key={link.id} className={`list-none`}>
-            <Link
-              href={link.path}
-              className={
-                isActive(link.path)
-                  ? 'underline decoration-blue-500 decoration-4'
-                  : ''
-              }
-            >
-              {link.name}
-            </Link>
-          </li>
+          <Link
+            href={link.path}
+            key={link.id}
+            locale={`${locale}`}
+            className={
+              isActive(link.path) ? `${textClass} active` : `${textClass}`
+            }
+          >
+            {link.name}
+          </Link>
         );
       })}
-    </ul>
+    </>
   );
 }
+
+// <div className="hidden space-x-6 md:flex">
+//   <Link href="/" locale={`ru`} className={`${textColor}`}>
+//     Home
+//   </Link>{' '}
+//   <Link href="/about" locale={`ru`} className={`${textColor}`}>
+//     About
+//   </Link>
+// </div>;

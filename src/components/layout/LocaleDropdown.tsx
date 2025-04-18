@@ -16,7 +16,6 @@ export default function LocaleDropdown() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const locale = useLocale();
-  console.log(locale);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -32,7 +31,7 @@ export default function LocaleDropdown() {
     'flex w-full justify-between items-center px-4 py-3 text-md';
 
   return (
-    <div className="flex space-x-10 text-white">
+    <div className="flex space-x-10 text-light">
       <div className="relative inline-block text-left">
         {/* <div>
                     <button
@@ -47,12 +46,12 @@ export default function LocaleDropdown() {
         <IoLanguageSharp
           className={`cursor-pointer`}
           onClick={toggleDropdown}
-          color={`white`}
+          color={`light`}
           size={`1.75rem`}
         />
         {isOpen && (
           <div
-            className="absolute right-0 mt-2 w-44 origin-top-right bg-white text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+            className="absolute right-0 mt-2 w-44 origin-top-right bg-light text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             tabIndex={-1}
@@ -63,12 +62,12 @@ export default function LocaleDropdown() {
                   className={
                     localeItem.code !== locale
                       ? localeClassname +
-                        ' text-gray-700 hover:bg-gray-700 hover:text-white'
-                      : localeClassname + ' bg-gray-700 text-white'
+                        ' text-gray-700 hover:bg-gray-700 hover:text-light'
+                      : localeClassname + ' bg-gray-700 text-light'
                   }
                   key={localeItem.code}
                   // href={pathname}
-                  href={'/'}
+                  href={`${pathname}`}
                   locale={localeItem.code}
                 >
                   <span>
