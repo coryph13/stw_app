@@ -1,21 +1,114 @@
+/* global.css */
+
+/* Базовые стили от Tailwind */
 @tailwind base;
+
+/* Компоненты Tailwind (кнопки, формы, и прочее) */
 @tailwind components;
+
+/* Утилиты Tailwind (для flex, grid, отступов и т.д.) */
 @tailwind utilities;
 
 :root {
-  --background: #ededed;
-  --foreground: #171717;
+    --background: #0A0A0A;
+    /* Чёрный фон по умолчанию */
+    --foreground: #F5F5F5;
+    /* Белый текст/основной цвет */
+
+    --gray: #BDBDBD;
+    /* Светло-серый универсальный */
+    --gray-dark: #2E2E2E;
+    /* Тёмно-серый фон или текст */
+    --gray-light: #D8D8D8;
+    /* Светло-серый фон */
+    --border: #3A3A3A;
+    /* Цвет границ и разделителей */
+    --accent: #C2B280;
+    /* Акцентный цвет (золото) */
+    --muted: #1E1E1E;
+    /* Затенённый фон, блоки */
+    --text-muted: #999999;
+    /* Тусклый текст, второстепенный */
+
+
+    --font-raleway: 'Raleway', sans-serif;
+    --font-inter: 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='light'] {
+    --background: #F5F5F5;
+    /* Светлый фон */
+    --foreground: #0A0A0A;
+    /* Тёмный текст */
+    --gray: #4B4B4B;
+    /* Серый для текста/иконок */
+    --gray-dark: #777777;
+    /* Тёмно-серый фон */
+    --gray-light: #E0E0E0;
+    /* Светлый серый фон */
+    --border: #DADADA;
+    /* Цвет границ в светлой теме */
+    --accent: #C2B280;
+    /* Золото (остается прежним) */
+    --muted: #F0F0F0;
+    /* Очень светлый фон секций */
+    --text-muted: #5F5F5F;
+    /* Серый текст (менее активный) */
 }
+
+[data-theme='dark'] {
+    --background: #0A0A0A;
+    /* Чёрный фон */
+    --foreground: #F5F5F5;
+    /* Белый текст */
+    --gray: #BDBDBD;
+    /* Светлый серый */
+    --gray-dark: #2E2E2E;
+    /* Очень тёмный серый */
+    --gray-light: #D8D8D8;
+    /* Светло-серый */
+    --border: #3A3A3A;
+    /* Цвет границ */
+    --accent: #C2B280;
+    /* Золото */
+    --muted: #1E1E1E;
+    /* Тёмный затенённый фон */
+    --text-muted: #999999;
+    /* Серый текст, второстепенный */
+}
+
+
+/* @media (prefers-color-scheme: light) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Roboto, Helvetica, sans-serif;
+    font-family: var(--font-inter), sans-serif;
+    /* Основной текст */
+
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+[data-theme='light'] body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+[data-theme='dark'] body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-raleway), sans-serif;
+    /* Заголовки */
 }

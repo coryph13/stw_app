@@ -2,52 +2,53 @@ import type { Config } from "tailwindcss";
 
 export default {
     content: [
-        // "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        // "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        // "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    darkMode: 'media',
     theme: {
-        // screens: {
-        //     sm: '480px',
-        //     md: '768px',
-        //     lg: '976px',
-        //     xl: '1440px',
-        // },
-        // colors: {
-        //     'blue': '#1fb6ff',
-        //     'purple': '#7e5bef',
-        //     'pink': '#ff49db',
-        //     'orange': '#ff7849',
-        //     'green': '#13ce66',
-        //     'yellow': '#ffc82c',
-        //     'gray-dark': '#273444',
-        //     'gray': '#8492a6',
-        //     'gray-light': '#d3dce6',
-        // },
-        // fontFamily: {
-        //     sans: ['Graphik', 'sans-serif'],
-        //     serif: ['Merriweather', 'serif'],
-        // },
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-                primary: '#D8CDB5',    // Тёплый бежевый
-                dark: '#2E2B27',       // Тёмный серо-коричневый
-                accent: '#A18755',     // Латунный
-                light: '#F4F1EA',      // Светлый фон
-                hover: '#3A3733',      // Цвет при наведении
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
+                gray: 'var(--gray)',
+                'gray-dark': 'var(--gray-dark)',
+                'gray-light': 'var(--gray-light)',
+                border: 'var(--border)',
+                accent: 'var(--accent)',
+                muted: 'var(--muted)',
+                'text-muted': 'var(--text-muted)',
             },
-            // spacing: {
-            //     '128': '32rem',
-            //     '144': '36rem',
-            // },
-            // borderRadius: {
-            //     '4xl': '2rem',
-            // },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                heading: ['Raleway', 'sans-serif'],
+            },
+            fontSize: {
+                'heading-1': ['48px', { lineHeight: '1.2' }],
+                'heading-2': ['32px', { lineHeight: '1.3' }],
+                'base': ['16px', { lineHeight: '1.5' }],
+                'small': ['14px', { lineHeight: '1.4' }],
+                'tiny': ['12px', { lineHeight: '1.3' }],
+            },
+            screens: {
+                xs: '360px',
+                sm: '480px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1280px',
+                '2xl': '1440px',
+            },
+            container: {
+                center: true,
+                padding: {
+                    DEFAULT: '1rem',
+                    sm: '1.25rem',
+                    md: '2rem',
+                    lg: '2.5rem',
+                    xl: '3rem',
+                    '2xl': '4rem',
+                },
+            },
         },
-        darkMode: 'class'
     },
     plugins: [],
 } satisfies Config;

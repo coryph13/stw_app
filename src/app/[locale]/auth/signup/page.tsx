@@ -1,7 +1,8 @@
-import { SignupForm } from "@/ui/forms/SignupForm";
+// import { SignupForm } from "@/ui/forms/SignupForm";
 
 export default async function Page() {
     return (
-        <SignupForm />
+        // <SignupForm />
+        <div></div>
     );
 }

@@ -26,5 +26,8 @@
     },
     "ProductsPage": {
         "description": "Product List Description"
+    },
+    "Footer": {
+        "Rights": "STW. All rights reserved."
     }
 }

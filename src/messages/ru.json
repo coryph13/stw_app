@@ -26,5 +26,8 @@
     },
     "ProductsPage": {
         "description": "Описание страницы Продукты"
+    },
+    "Footer": {
+        "Rights": "STW. Все права защищены."
     }
 }

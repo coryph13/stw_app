@@ -3,7 +3,7 @@
 import LocaleDropdown from '@/components/layout/LocaleDropdown';
 import NavLinks from './NavLinks';
 import Logo from './Logo';
-import SearchBtn from './SearchBtn';
+// import SearchBtn from './SearchBtn';
 
 import { IoMdClose } from 'react-icons/io';
 import { IoMdMenu } from 'react-icons/io';
@@ -18,56 +18,67 @@ export const Navbar = () => {
   const pathname = usePathname();
   const t = useTranslations('Nav');
 
-  const textClass = `text-dark hover:text-accent dark:text-white dark:hover:text-gray-300`;
-
   useEffect(() => {
     // Закрываем меню при изменении маршрута
     setIsOpen(false);
   }, [pathname]);
 
+  // TODO: Btn заменить обычными Link.
+  // TODO: Использовать pathname.startsWith('/about') для того, чтобы все последующие сегменты роута также выделяли пункт навигации (.active)
+
   return (
-    // <nav className="fixed flex h-16 w-full items-center justify-between bg-gray-900 px-4">
-    //   <Logo />
-    //   <NavLinks />
-    //   <LocaleDropdown />
-    //   <SearchBtn />
-    //   {/* <ProfileDropdown /> */}
-    // </nav>
-    <nav
-      className={`bg-light p-4 shadow-md shadow-dark dark:bg-dark dark:shadow-light`}
-    >
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="p-4 shadow-md">
+      <div className="mx-auto flex items-center justify-between">
         <Logo />
 
-        <div className={`hidden space-x-6 md:flex`}>
-          <NavLinks textClass={`${textClass}`} />
+        {/* Навигационные ссылки для больших экранов */}
+        <div className="hidden space-x-6 md:flex">
+          <NavLinks />
         </div>
 
+        {/* Дропдаун для выбора локали */}
         <LocaleDropdown />
-        
+
+        {/* Кнопки входа и регистрации для больших экранов */}
         <div className="hidden space-x-4 md:flex">
-          <Btn variant="outline">{t('login')}</Btn>
-          <Btn>{t('sign-up')}</Btn>
+          <Btn
+            variant="outline"
+            className="border-foreground text-foreground hover:bg-muted"
+          >
+            {t('login')}
+          </Btn>
+          <Btn className="bg-accent text-background hover:bg-accent-dark">
+            {t('sign-up')}
+          </Btn>
         </div>
 
+        {/* Кнопка меню для мобильных экранов */}
         <button
-          className="text-light md:hidden"
+          className="text-foreground md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <IoMdClose className={`${textClass}`} size={`1.5rem`} />
+            <IoMdClose className="text-foreground" size="1.5rem" />
           ) : (
-            <IoMdMenu className={`${textClass}`} size={`1.5rem`} />
+            <IoMdMenu className="text-foreground" size="1.5rem" />
           )}
         </button>
       </div>
 
+      {/* Мобильное меню */}
       {isOpen && (
         <div className="mt-4 flex flex-col space-y-4 text-center md:hidden">
-          <NavLinks textClass={`${textClass}`} />
+          <NavLinks />
 
-          <Btn variant="outline">{t('login')}</Btn>
-          <Btn>{t('sign-up')}</Btn>
+          <Btn
+            variant="outline"
+            className="border-foreground text-foreground hover:bg-muted"
+          >
+            {t('login')}
+          </Btn>
+          <Btn className="bg-accent text-background hover:bg-accent-dark">
+            {t('sign-up')}
+          </Btn>
         </div>
       )}
     </nav>

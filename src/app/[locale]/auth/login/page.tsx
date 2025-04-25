@@ -1,14 +1,9 @@
-import { LoginForm } from "@/ui/forms/LoginForm";
-export default async function Page({
-    params
-}: {
-    params: Promise<{
-        locale: string
-    }>
-}) {
-    const { locale } = await params;
+// import { LoginForm } from "@/ui/forms/LoginForm";
+export default async function Page() {
+    // const { locale } = await params;
 
     return (
-        <LoginForm locale={locale} />
+        // <LoginForm locale={locale} />
+        <div></div>
     );
 }

@@ -1,42 +1,52 @@
-import "@/styles/tailwind.css";
-import "@/app/globals.css";
-import { roboto } from "@/lib/fonts/roboto";
+import '@/styles/tailwind.css';
+import '@/app/globals.css';
+import { raleway, inter } from '@/lib/fonts';
 
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import Header from "@/components/layout/Header";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { ThemeProvider } from '@/context/ThemeContext';
 
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 
 export default async function RootLayout({
-    children,
-    params
-}: Readonly<{
-    children: React.ReactNode,
-    params: Promise<{ locale: string }>,
-}>) {
-    const { locale } = await params;
-    const messages = await getMessages();
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const messages = await getMessages();
 
-    return (
-        <NextIntlClientProvider messages={messages}>
-            <html lang={locale}>
-                <head>
+  return (
+    <html lang={locale} className={`${raleway.variable} ${inter.variable}`}>
+      <body>
+        <ThemeProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Header />
 
-                </head>
-                <body className={`${roboto.className} flex flex-col min-h-screen`}>
-                    <Header />
-                    <main className={`flex-grow container mx-auto p-4`}>
-                        {children}
-                    </main>
-                    {/* <Footer /> */}
-                    <footer className="bg-gray-800 text-white text-center p-4 mt-4">
-                        <p>&copy; 2025 STW. Все права защищены.</p>
-                    </footer>
-                </body>
-            </html>
-        </NextIntlClientProvider >
-    );
+            <main>{children}</main>
+
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
+
+// <html lang={locale}>
+// <head></head>
+// <body className={`${roboto.className} flex min-h-screen flex-col`}>
+//   <Header />
+//   <main className={`container mx-auto flex-grow p-4`}>{children}</main>
+//   {/* <Footer /> */}
+//   <footer className="bg-gray-800 mt-4 p-4 text-center text-white">
+//     <p>&copy; 2025 STW. Все права защищены.</p>
+//   </footer>
+// </body>
+// </html>
 
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
@@ -73,5 +83,3 @@ export default async function RootLayout({
 //     </html>
 //   );
 // }
-
-

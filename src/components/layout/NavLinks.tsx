@@ -3,7 +3,7 @@
 import { Link, usePathname } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
 
-export default function NavLinks({ textClass = '' }) {
+export default function NavLinks() {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
   const t = useTranslations('Nav');
@@ -25,9 +25,11 @@ export default function NavLinks({ textClass = '' }) {
             href={link.path}
             key={link.id}
             locale={`${locale}`}
-            className={
-              isActive(link.path) ? `${textClass} active` : `${textClass}`
-            }
+            className={` ${isActive(link.path) ? 'text-accent' : 'text-foreground'}
+                hover:text-accent
+                active:text-accent
+                transition-colors duration-200
+            `}
           >
             {link.name}
           </Link>

@@ -1,90 +1,62 @@
 'use client';
 
-import { Link, usePathname } from '@/i18n/routing';
 import { useState } from 'react';
-// import { LanguageIcon } from '@heroicons/react/24/solid';
-// import { GrLanguage } from 'react-icons/gr';
-import { IoLanguageSharp } from 'react-icons/io5';
-
-import IconSrcEn from 'flag-icons/flags/4x3/gb.svg';
-import IconSrcRu from 'flag-icons/flags/4x3/ru.svg';
-import IconSrcUz from 'flag-icons/flags/4x3/uz.svg';
-import Image from 'next/image';
+import { Link, usePathname } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
+import ReactCountryFlag from 'react-country-flag';
 
 export default function LocaleDropdown() {
   const pathname = usePathname();
+  const currentLocale = useLocale();
+  //   const t = useTranslations('Locale'); // предполагаем, что переводы находятся в namespace "Locale"
   const [isOpen, setIsOpen] = useState(false);
-  const locale = useLocale();
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const countries = {
+    uz: { code: 'UZ', name: /* t('uz') */ 'Oʻzbekcha', locale: 'uz' },
+    ru: { code: 'RU', name: /* t('ru') */ 'Русский', locale: 'ru' },
+    en: { code: 'US', name: /* t('en') */ 'English', locale: 'en' },
   };
 
-  const locales = [
-    { code: 'uz', label: 'Oʻzbekcha', src: IconSrcUz },
-    { code: 'ru', label: 'Русский', src: IconSrcRu },
-    { code: 'en', label: 'English', src: IconSrcEn },
-  ];
-
-  const localeClassname =
-    'flex w-full justify-between items-center px-4 py-3 text-md';
-
   return (
-    <div className="flex space-x-10 text-light">
-      <div className="relative inline-block text-left">
-        {/* <div>
-                    <button
-                        type="button"
-                        // className="inline-flex items-center justify-center"
-                        aria-expanded={isOpen ? 'true' : 'false'}
-                        aria-haspopup="true"
-                    >
-                    </button>
-                </div> */}
-
-        <IoLanguageSharp
-          className={`cursor-pointer`}
-          onClick={toggleDropdown}
-          color={`light`}
-          size={`1.75rem`}
+    <div className="relative">
+      <button
+        onClick={toggleDropdown}
+        className="flex items-center gap-2 rounded-full border border-border p-1 transition hover:opacity-80"
+      >
+        <ReactCountryFlag
+          countryCode={countries[currentLocale].code}
+          svg
+          className="rounded-full object-cover"
+          style={{ width: '2rem', height: '2rem' }}
+          title={countries[currentLocale].name}
         />
-        {isOpen && (
-          <div
-            className="absolute right-0 mt-2 w-44 origin-top-right bg-light text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-            role="menu"
-            aria-orientation="vertical"
-            tabIndex={-1}
-          >
-            <div className="" role="none">
-              {locales.map(localeItem => (
-                <Link
-                  className={
-                    localeItem.code !== locale
-                      ? localeClassname +
-                        ' text-gray-700 hover:bg-gray-700 hover:text-light'
-                      : localeClassname + ' bg-gray-700 text-light'
-                  }
-                  key={localeItem.code}
-                  // href={pathname}
-                  href={`${pathname}`}
-                  locale={localeItem.code}
-                >
-                  <span>
-                    <Image
-                      src={localeItem.src}
-                      width="25"
-                      height="19"
-                      alt={localeItem.label}
-                    />
-                  </span>
-                  <span className="h-[19px]">{localeItem.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
+      </button>
+
+      {isOpen && (
+        <ul className="absolute right-0 z-50 mt-2 w-48 rounded-md border border-border bg-background shadow-lg">
+          {Object.entries(countries).map(([key, { code, name, locale }]) => (
+            <li key={key}>
+              <Link
+                href={pathname}
+                locale={locale}
+                className="flex items-center gap-3 px-4 py-2 transition-colors hover:bg-muted"
+                onClick={() => setIsOpen(false)}
+              >
+                <ReactCountryFlag
+                  countryCode={code}
+                  svg
+                  className="rounded-full object-cover"
+                  style={{ width: '1.75rem', height: '1.75rem' }}
+                  title={name}
+                />
+                <span className="text-sm text-foreground">{name}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
