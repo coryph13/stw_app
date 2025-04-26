@@ -1,22 +1,24 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl';
 
-import defaultMessages from '@/messages/en.json';
+export default function NotFoundPage() {
+  const t = useTranslations('NotFoundPage');
 
-export default function LocalizedNotFound() {
-    const [messages, setMessages] = useState(defaultMessages.NotFound);
-    const { locale } = useParams();
-
-    useEffect(() => {
-        import(`@/messages/${locale}.json`)
-            .then(({ NotFound }) => {
-                setMessages(NotFound)
-            });
-    }, [locale])
-
-    return (
-        <h1>{ messages.heading }</h1>
-    )
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background p-4 text-center">
+      <div>
+        <h1 className="font-heading text-heading-1 text-foreground mb-4">
+          {t('heading')}
+        </h1>
+        <p className="text-base text-text-muted mb-8">{t('description')}</p>
+        <a
+          href="/"
+          className="inline-block rounded-lg bg-accent px-6 py-3 text-background hover:bg-accent-dark transition"
+        >
+          {t('back-to-home')}
+        </a>
+      </div>
+    </div>
+  );
 }

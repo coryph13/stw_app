@@ -13,7 +13,7 @@ export default function Loader() {
         cy="50"
         r="45"
         fill="none"
-        stroke="var(--gray-light)"
+        stroke="var(--foreground)"
         strokeWidth="4"
         strokeDasharray="282.74" // длина окружности
         strokeDashoffset="282.74"

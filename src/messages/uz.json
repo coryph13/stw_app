@@ -1,33 +1,44 @@
 {
-    "Search": {
-        "placeholder": "Search for products..."
-    },
-    "Hello": {
-        "greeting": "Hello"
-    },
-    "NotFound": {
-        "heading": "Page not found!"
-    },
-    "Nav": {
-        "home": "Главная",
-        "about": "О нас",
-        "blog": "Блог",
-        "products": "Продукты",
-        "contacts": "Контакты",
-        "login": "Войти",
-        "sign-up": "Регистрация"
-    },
-    "ProductReviews": {
-        "heading": "Reviews"
-    },
-    "ProductPage": {
-        "name": "Name",
-        "description": "Description"
-    },
-    "ProductsPage": {
-        "description": "Product List Description"
-    },
-    "Footer": {
-        "Rights": "STW. All rights reserved."
-    }
+  "Search": {
+    "placeholder": "Search for products..."
+  },
+  "Hello": {
+    "greeting": "Hello"
+  },
+  "NotFound": {
+    "heading": "Page not found!"
+  },
+  "Nav": {
+    "home": "Главная",
+    "about": "О нас",
+    "blog": "Блог",
+    "products": "Продукты",
+    "contacts": "Контакты",
+    "login": "Войти",
+    "sign-up": "Регистрация"
+  },
+  "ProductReviews": {
+    "heading": "Reviews"
+  },
+  "ProductPage": {
+    "name": "Name",
+    "description": "Description"
+  },
+  "ProductsPage": {
+    "description": "Product List Description"
+  },
+  "Footer": {
+    "Rights": "STW. All rights reserved."
+  },
+  "ErrorPage": {
+    "title": "Nimadir noto'g'ri ketdi",
+    "description": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring yoki bosh sahifaga qayting.",
+    "tryAgain": "Qayta urinib ko‘rish",
+    "backHome": "Bosh sahifaga"
+  },
+  "NotFoundPage": {
+    "heading": "Sahifa topilmadi",
+    "description": "Kechirasiz, siz izlayotgan sahifani topa olmadik.",
+    "back-to-home": "Bosh sahifaga qaytish"
+  }
 }

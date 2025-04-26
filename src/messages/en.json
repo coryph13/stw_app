@@ -1,38 +1,49 @@
 {
-    "Search": {
-        "placeholder": "Search for products..."
-    },
-    "ProductReviews": {
-        "heading": "Reviews"
-    },
-    "Hello": {
-        "greeting": "Hello"
-    },
-    "NotFound": {
-        "heading": "Page not found!"
-    },
-    "Nav": {
-        "home": "Home",
-        "about": "About",
-        "blog": "Blog",
-        "products": "Products",
-        "contacts": "Contacts",
-        "login": "Login",
-        "sign-up": "Sign Up"
-    },
-    "ProductPage": {
-        "name": "Name",
-        "description": "Description"
-    },
-    "ProductsPage": {
-        "description": "Product List Description"
-    },
-    "Footer": {
-        "Rights": "STW. All rights reserved."
-    },
-    "Locales": {
-        "uz": "Uzbek",
-        "ru": "Russian",
-        "en": "English"
-    }
+  "Search": {
+    "placeholder": "Search for products..."
+  },
+  "ProductReviews": {
+    "heading": "Reviews"
+  },
+  "Hello": {
+    "greeting": "Hello"
+  },
+  "NotFound": {
+    "heading": "Page not found!"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "products": "Products",
+    "contacts": "Contacts",
+    "login": "Login",
+    "sign-up": "Sign Up"
+  },
+  "ProductPage": {
+    "name": "Name",
+    "description": "Description"
+  },
+  "ProductsPage": {
+    "description": "Product List Description"
+  },
+  "Footer": {
+    "Rights": "STW. All rights reserved."
+  },
+  "Locales": {
+    "uz": "Uzbek",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An error occurred. Please try again or return to the homepage.",
+    "tryAgain": "Try again",
+    "backHome": "Back to Home"
+  },
+  "NotFoundPage": {
+    "heading": "Page not found",
+    "description": "Sorry, we couldn’t find the page you’re looking for.",
+    "back-to-home": "Back to home"
+  }
 }

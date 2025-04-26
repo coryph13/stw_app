@@ -1,33 +1,44 @@
 {
-    "Search": {
-        "placeholder": "Поиск продукта..."
-    },
-    "ProductReviews": {
-        "heading": "Отзывы"
-    },
-    "Hello": {
-        "greeting": "Привет"
-    },
-    "NotFound": {
-        "heading": "Страница не найдена!"
-    },
-    "Nav": {
-        "home": "Главная",
-        "about": "О нас",
-        "blog": "Блог",
-        "products": "Продукты",
-        "contacts": "Контакты",
-        "login": "Войти",
-        "sign-up": "Регистрация"
-    },
-    "ProductPage": {
-        "name": "Наименование",
-        "description": "Описание"
-    },
-    "ProductsPage": {
-        "description": "Описание страницы Продукты"
-    },
-    "Footer": {
-        "Rights": "STW. Все права защищены."
-    }
+  "Search": {
+    "placeholder": "Поиск продукта..."
+  },
+  "ProductReviews": {
+    "heading": "Отзывы"
+  },
+  "Hello": {
+    "greeting": "Привет"
+  },
+  "NotFound": {
+    "heading": "Страница не найдена!"
+  },
+  "Nav": {
+    "home": "Главная",
+    "about": "О нас",
+    "blog": "Блог",
+    "products": "Продукты",
+    "contacts": "Контакты",
+    "login": "Войти",
+    "sign-up": "Регистрация"
+  },
+  "ProductPage": {
+    "name": "Наименование",
+    "description": "Описание"
+  },
+  "ProductsPage": {
+    "description": "Описание страницы Продукты"
+  },
+  "Footer": {
+    "Rights": "STW. Все права защищены."
+  },
+  "ErrorPage": {
+    "title": "Что-то пошло не так",
+    "description": "Произошла ошибка. Пожалуйста, попробуйте снова или вернитесь на главную страницу.",
+    "tryAgain": "Попробовать снова",
+    "backHome": "На главную"
+  },
+  "NotFoundPage": {
+    "heading": "Страница не найдена",
+    "description": "Извините, но мы не смогли найти страницу, которую вы ищете.",
+    "back-to-home": "Вернуться на главную"
+  }
 }
