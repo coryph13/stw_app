@@ -41,7 +41,7 @@ export default function LocaleDropdown() {
               <Link
                 href={pathname}
                 locale={locale}
-                className="flex items-center gap-3 px-4 py-2 transition-colors hover:bg-muted"
+                className="group flex items-center gap-3 px-4 py-2 transition-colors hover:bg-muted"
                 onClick={() => setIsOpen(false)}
               >
                 <ReactCountryFlag
@@ -51,7 +51,7 @@ export default function LocaleDropdown() {
                   style={{ width: '1.75rem', height: '1.75rem' }}
                   title={name}
                 />
-                <span className="text-sm text-foreground">{name}</span>
+                <span className="text-sm text-foreground group-hover:text-accent">{name}</span>
               </Link>
             </li>
           ))}

@@ -9,9 +9,11 @@ import { IoMdClose } from 'react-icons/io';
 import { IoMdMenu } from 'react-icons/io';
 // import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Btn } from '@/components/ui/Btn';
 import { useTranslations } from 'next-intl';
 import { usePathname } from '@/i18n/routing';
+import OutlineLink from './OutlineLink';
+import FilledLink from './FilledLink';
+import LocaleInline from './LocaleInline';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,19 +39,14 @@ export const Navbar = () => {
         </div>
 
         {/* Дропдаун для выбора локали */}
-        <LocaleDropdown />
+        <div className="hidden md:flex">
+          <LocaleDropdown />
+        </div>
 
         {/* Кнопки входа и регистрации для больших экранов */}
         <div className="hidden space-x-4 md:flex">
-          <Btn
-            variant="outline"
-            className="border-foreground text-foreground hover:bg-muted"
-          >
-            {t('login')}
-          </Btn>
-          <Btn className="bg-accent text-background hover:bg-accent-dark">
-            {t('sign-up')}
-          </Btn>
+          <OutlineLink href="/login">{t('login')}</OutlineLink>
+          <FilledLink href="/register">{t('sign-up')}</FilledLink>
         </div>
 
         {/* Кнопка меню для мобильных экранов */}
@@ -70,15 +67,11 @@ export const Navbar = () => {
         <div className="mt-4 flex flex-col space-y-4 text-center md:hidden">
           <NavLinks />
 
-          <Btn
-            variant="outline"
-            className="border-foreground text-foreground hover:bg-muted"
-          >
-            {t('login')}
-          </Btn>
-          <Btn className="bg-accent text-background hover:bg-accent-dark">
-            {t('sign-up')}
-          </Btn>
+          <LocaleInline />
+
+          {/* Кнопки входа и регистрации для мобильных экранов */}
+          <OutlineLink href="/login">{t('login')}</OutlineLink>
+          <FilledLink href="/register">{t('sign-up')}</FilledLink>
         </div>
       )}
     </nav>

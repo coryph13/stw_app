@@ -2,6 +2,8 @@
 
 import { Link, usePathname } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
+import OutlineLink from './OutlineLink';
+import FilledLink from './FilledLink';
 
 export default function NavLinks() {
   const pathname = usePathname();
@@ -25,11 +27,7 @@ export default function NavLinks() {
             href={link.path}
             key={link.id}
             locale={`${locale}`}
-            className={` ${isActive(link.path) ? 'text-accent' : 'text-foreground'}
-                hover:text-accent
-                active:text-accent
-                transition-colors duration-200
-            `}
+            className={` ${isActive(link.path) ? 'text-accent' : 'text-foreground'} transition-colors duration-200 hover:text-accent active:text-accent`}
           >
             {link.name}
           </Link>

@@ -112,3 +112,40 @@ h6 {
     font-family: var(--font-raleway), sans-serif;
     /* Заголовки */
 }
+
+/* Loading animation */
+@keyframes outerRingAnimation {
+    0% {
+        stroke-dashoffset: 282.74;
+    }
+
+    50% {
+        stroke-dashoffset: 100;
+    }
+
+    100% {
+        stroke-dashoffset: 282.74;
+    }
+}
+
+@keyframes innerRingAnimation {
+    0% {
+        stroke-dashoffset: 219.91;
+    }
+
+    50% {
+        stroke-dashoffset: 60;
+    }
+
+    100% {
+        stroke-dashoffset: 219.91;
+    }
+}
+
+.outer-ring {
+    animation: outerRingAnimation 3s ease-in-out infinite;
+}
+
+.inner-ring {
+    animation: innerRingAnimation 2s ease-in-out infinite;
+}
