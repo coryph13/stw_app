@@ -1,0 +1,49 @@
+{
+  "AboutPage": {
+    "heading": "Biz haqimizda",
+    "description": "Bizning kompaniya sifatli LДСП, LМДФ va stoleshnitsalarni ishlab chiqarish va sotish bilan shug'ullanadi.",
+    "missionTitle": "Bizning Missiya",
+    "missionDescription": "Mebel ishlab chiqarish va interyer dizayni uchun yuqori sifatli materiallar bilan bozorni ta'minlash.",
+    "valuesTitle": "Bizning Qadriyatlarimiz",
+    "value1": "Sifat",
+    "value2": "Ishonchlilik",
+    "value3": "Shaxsiy yondashuv",
+    "teamTitle": "Bizning Jamoa",
+    "teamDescription": "Biz o'z ishining mutaxassislarimiz, umumiy maqsadga ega bo'lib — sizlar uchun eng yaxshisini yaratish."
+  },
+  "ContactsPage": {
+    "heading": "Aloqa",
+    "description": "Mahsulotlarimiz va xizmatlarimiz haqida qo‘shimcha ma’lumot olish uchun biz bilan bog‘laning.",
+    "contactTitle": "Bizning aloqa ma'lumotlarimiz",
+    "addressLabel": "Manzil",
+    "address": "Toshkent, Namuna ko‘chasi, 123",
+    "phoneLabel": "Telefon",
+    "phone": "+998 90 123 45 67",
+    "emailLabel": "Elektron pochta",
+    "email": "info@example.com"
+  },
+  "NotFound": {
+    "heading": "Sahifa topilmadi!"
+  },
+  "NotFoundPage": {
+    "heading": "Sahifa topilmadi",
+    "description": "Kechirasiz, qidirayotgan sahifani topa olmadik.",
+    "back-to-home": "Bosh sahifaga qaytish"
+  },
+  "ErrorPage": {
+    "title": "Nimadir noto'g'ri ketdi",
+    "description": "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring yoki bosh sahifaga qayting.",
+    "tryAgain": "Qayta urinib ko‘rish",
+    "backHome": "Bosh sahifaga qaytish"
+  },
+  "ProductPage": {
+    "characteristics": "Xususiyatlar",
+    "thickness": "Qalinlik",
+    "size": "O'lcham",
+    "material": "Material",
+    "features": "Afzalliklar"
+  },
+  "ProductsPage": {
+    "description": "Mahsulotlar ro'yxati tavsifi"
+  }
+}

@@ -1,7 +1,7 @@
 import classes from '@/styles/modules/Home.module.css';
 
 export default async function Page() {
-  await new Promise(resolve => setTimeout(resolve, 10000)); // ← задержка
+  await new Promise(resolve => setTimeout(resolve, 2000)); // ← задержка
 
   return (
     <div className={classes.home}>

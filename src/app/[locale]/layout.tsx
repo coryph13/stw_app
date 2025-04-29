@@ -21,13 +21,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${raleway.variable} ${inter.variable}`}>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
-
-            <main>{children}</main>
-
+            <main className="flex-grow">{children}</main>
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>

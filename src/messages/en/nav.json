@@ -1,0 +1,11 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "products": "Products",
+    "contacts": "Contacts",
+    "login": "Login",
+    "sign-up": "Sign Up"
+  }
+}

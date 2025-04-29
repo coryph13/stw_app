@@ -1,0 +1,11 @@
+{
+  "Nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "blog": "Blog",
+    "products": "Mahsulotlar",
+    "contacts": "Aloqa",
+    "login": "Kirish",
+    "sign-up": "Ro'yxatdan o'tish"
+  }
+}

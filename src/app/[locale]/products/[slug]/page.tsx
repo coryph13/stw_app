@@ -1,24 +1,15 @@
-import ProductPage from "@/i18n/pages/ProductPage";
-import { getProduct } from "@/lib/fetch/products";
-import { notFound } from "next/navigation";
+import ProductDetails from '@/components/ProductDetails';
 
-export default async function Page({
-    params
-}: {
-    params: Promise<{
-            locale: string;
-            slug: string;
-    }>
-}) {
-    const {slug, locale} = await params;
+interface ProductPageProps {
+  params: { slug: string; locale: string };
+}
 
-    try {
-        const entity = await getProduct(slug);
+export default function ProductPage({ params }: ProductPageProps) {
+  //   const locale = useLocale();
 
-        return (
-            <ProductPage entity={entity} />
-        );
-    } catch (e) {
-        notFound();
-    }
+  return (
+    <>
+      <ProductDetails slug={params.slug} locale={params.locale} />
+    </>
+  );
 }

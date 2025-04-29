@@ -1,0 +1,20 @@
+{
+  "Search": {
+    "placeholder": "Поиск товаров..."
+  },
+  "ProductReviews": {
+    "heading": "Отзывы"
+  },
+  "Hello": {
+    "greeting": "Привет"
+  },
+  "Footer": {
+    "Rights": "Все права защищены",
+    "Contacts": "Контакты",
+    "About": "О нас",
+    "PrivacyPolicy": "Политика конфиденциальности"
+  },
+  "Breadcrumbs": {
+    "home": "Главная"
+  }
+}

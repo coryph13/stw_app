@@ -1,0 +1,20 @@
+{
+  "Search": {
+    "placeholder": "Mahsulotlarni qidiring..."
+  },
+  "ProductReviews": {
+    "heading": "Sharhlar"
+  },
+  "Hello": {
+    "greeting": "Salom"
+  },
+  "Footer": {
+    "Rights": "Barcha huquqlar himoyalangan",
+    "Contacts": "Aloqa",
+    "About": "Biz haqimizda",
+    "PrivacyPolicy": "Maxfiylik siyosati"
+  },
+  "Breadcrumbs": {
+    "home": "Bosh sahifa"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "AboutPage": {
+    "heading": "About Us",
+    "description": "Our company is engaged in the production and sale of high-quality chipboard (LDSP), medium-density fiberboard (MDF), and countertops.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To provide the market with high-quality materials for furniture production and interior design.",
+    "valuesTitle": "Our Values",
+    "value1": "Quality",
+    "value2": "Reliability",
+    "value3": "Individual Approach",
+    "teamTitle": "Our Team",
+    "teamDescription": "We are professionals in our field, united by a common goal — to create the best for you."
+  },
+  "ContactsPage": {
+    "heading": "Contacts",
+    "description": "Get in touch with us for more information about our products and services.",
+    "contactTitle": "Our Contact Details",
+    "addressLabel": "Address",
+    "address": "Tashkent, Example Street, 123",
+    "phoneLabel": "Phone",
+    "phone": "+998 90 123 45 67",
+    "emailLabel": "Email",
+    "email": "info@example.com"
+  },
+  "NotFoundPage": {
+    "heading": "Page not found",
+    "description": "Sorry, we couldn’t find the page you’re looking for.",
+    "back-to-home": "Back to home"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An error occurred. Please try again or return to the homepage.",
+    "tryAgain": "Try again",
+    "backHome": "Back to Home"
+  },
+  "ProductPage": {
+    "characteristics": "Specifications",
+    "thickness": "Thickness",
+    "size": "Size",
+    "material": "Material",
+    "features": "Features"
+  },
+  "ProductsPage": {
+    "description": "Product List Description"
+  }
+}

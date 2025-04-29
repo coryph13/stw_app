@@ -30,11 +30,6 @@
   "Footer": {
     "Rights": "STW. All rights reserved."
   },
-  "Locales": {
-    "uz": "Uzbek",
-    "ru": "Russian",
-    "en": "English"
-  },
   "ErrorPage": {
     "title": "Something went wrong",
     "description": "An error occurred. Please try again or return to the homepage.",
