@@ -9,6 +9,8 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+export const revlidate = 0;
+
 export default async function RootLayout({
   children,
   params,
