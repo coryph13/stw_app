@@ -1,33 +1,20 @@
-import { IMedia } from '@/types/media'
-import { IManufacturer } from '@/types/manufacturer';
-import { ICategory } from '@/types/category';
-import { IMaterial } from '@/types/material';
-import { IBoard } from '@/types/board';
-import { IFeature } from '@/types/feature';
-import { IUsage } from '@/types/usage';
+import IApplication from "./application";
+import ICategory from "./category";
+import IManufacturer from "./manufacturer";
+import { ISpec } from "./spec";
 
 export interface IProduct {
     name: string;
-    code: string;
     slug: string;
+    code: string;
     description: string;
-
-    media: {
-        photo: IMedia,
-        design: IMedia
-    };
-
+    in_stock: boolean;
+    image: string;
+    design: string;
     manufacturer: IManufacturer;
-    category: ICategory;
-    material: IMaterial;
-    board: IBoard;
-
-    features: IFeature[];
-    usages: IUsage[];
-
-    isFavorite: boolean;
+    categories: ICategory[];
+    applications: IApplication[];
+    specs: ISpec[];
 }
 
-export interface IProductList {
-    products: IProduct[];
-}
+

@@ -1,9 +1,5 @@
-import { IMedia } from "@/types/media";
-
-export interface IManufacturer {
+export default interface IManufacturer {
     name: string;
     slug: string;
-    media: {
-        photo: IMedia
-    }
+    description: string;
 }

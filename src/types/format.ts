@@ -1,12 +1,9 @@
-interface Dimension {
-    value: string;
-    unit: string;
-}
+import IUnit from "./unit";
 
-export interface IFormat {
-    name: string;
+export default interface IFormat {
     slug: string;
-    width: Dimension;
-    height: Dimension;
-    thickness: Dimension;
+    width: number;
+    height: number;
+    thickness: number;
+    unit: IUnit;
 }

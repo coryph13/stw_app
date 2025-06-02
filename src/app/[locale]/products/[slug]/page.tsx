@@ -1,24 +1,32 @@
-import ProductPage from "@/i18n/pages/ProductPage";
-import { getProduct } from "@/lib/fetch/products";
+import { createGraphQLClient } from "@/lib/graphql-client";
+import { GET_PRODUCT } from "@/graphql/queries/product";
+import { IProduct } from "@/types/product";
 import { notFound } from "next/navigation";
 
-export default async function Page({
-    params
-}: {
-    params: Promise<{
-            locale: string;
-            slug: string;
-    }>
-}) {
-    const {slug, locale} = await params;
+interface PageProps {
+    params: {
+        locale: string;
+        slug: string;
+    };
+}
 
-    try {
-        const entity = await getProduct(slug);
+export default async function Page({ params }: { params: PageProps }) {
+    const { slug, locale } = await params;
+    const graphqlClient = createGraphQLClient(locale);
+    const { product } = await graphqlClient.request<{product: IProduct}>(
+        GET_PRODUCT,
+        { slug: slug}
+    );
 
-        return (
-            <ProductPage entity={entity} />
-        );
-    } catch (e) {
-        notFound();
+    if (!product) {
+        notFound()
+        // return <div>Product not found.</div>
     }
+
+    return (
+        <div>
+            <h1>{product.name}</h1>
+            <p>{product.description}</p>
+        </div>
+    );
 }

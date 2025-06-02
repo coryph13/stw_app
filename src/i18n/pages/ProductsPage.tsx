@@ -1,5 +1,5 @@
 import { getProducts } from "@/lib/fetch/products";
-import { IProduct, IProductList } from "@/types/product";
+import { IProduct } from "@/types/product";
 import Card from "../../components/ui/Card";
 import { useTranslations } from "next-intl";
 // TODO: Rename with ProductsPage
@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 export default function ProductsPage({
     entities
 }: {
-    entities: IProductList
+    entities: IProduct[]
 }) {
     const t = useTranslations('ProductsPage');
 

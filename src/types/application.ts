@@ -1,4 +1,4 @@
-export default interface ICategory {
+export default interface IApplication {
     slug: string;
     name: string;
     description: string;
