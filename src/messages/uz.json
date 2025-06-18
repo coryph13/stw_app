@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
-    "catalog": "Katalog",
+    "products": "Katalog",
     "news": "Yangiliklar",
     "contacts": "Aloqa"
   },
@@ -230,5 +230,68 @@
       "title": "Biz ijtimoiy tarmoqlarda",
       "followUs": "So'nggi yangiliklar va yangilanishlar uchun bizga obuna bo'ling"
     }
-  }
+  },
+  "products": {
+    "hero": {
+      "title": "Mahsulotlar katalogi",
+      "subtitle": "Sizning biznesingiz uchun yuqori sifatli materiallar"
+    },
+    "filters": {
+      "title": "Filtrlar",
+      "category": "Kategoriya",
+      "manufacturer": "Ishlab chiqaruvchi",
+      "clear": "Tozalash"
+    },
+    "showing": "Ko'rsatilmoqda",
+    "products": "mahsulotlar",
+    "noProducts": "Mahsulotlar topilmadi",
+    "inStock": "Mavjud",
+    "outOfStock": "Mavjud emas",
+    "code": "Kod"
+  },
+  "product": {
+    "breadcrumb": {
+      "catalog": "Katalog"
+    },
+    "code": "Artikul",
+    "manufacturer": "Ishlab chiqaruvchi",
+    "inStock": "Mavjud",
+    "outOfStock": "Mavjud emas",
+    "description": "Tavsif",
+    "categories": "Kategoriyalar",
+    "applications": "Qo'llanilishi",
+    "specs": {
+      "title": "Texnik xususiyatlar",
+      "baseMaterial": "Asosiy material",
+      "density": "Zichlik",
+      "emissionClass": "Emissiya sinfi",
+      "moistureResistance": "Namlikka chidamlilik",
+      "surfaceDurability": "Sirt chidamliligi",
+      "printTechnology": "Bosib chiqarish texnologiyasi",
+      "viscosity": "Yopishqoqlik",
+      "openTime": "Ochiq vaqt",
+      "fullCureTime": "To'liq qotish vaqti",
+      "package": "Qadoqlash",
+      "color": "Rang",
+      "texture": "Tekstura"
+    },
+    "formats": {
+      "title": "Mavjud formatlar",
+      "width": "Eni",
+      "height": "Bo'yi",
+      "thickness": "Qalinligi"
+    },
+    "decors": {
+      "title": "Dekorlar",
+      "code": "Kod",
+      "pattern": "Naqsh",
+      "shade": "Rang",
+      "textures": "Teksturalar"
+    },
+    "related": {
+      "title": "O'xshash mahsulotlar",
+      "viewAll": "Hammasini ko'rish"
+    }
+  },
+  "home": {}
 }

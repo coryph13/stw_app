@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Главная",
     "about": "О нас",
-    "catalog": "Каталог",
+    "products": "Каталог",
     "news": "Новости",
     "contacts": "Контакты"
   },
@@ -230,5 +230,68 @@
       "title": "Мы в социальных сетях",
       "followUs": "Подписывайтесь на нас для получения последних новостей и обновлений"
     }
-  }
+  },
+  "products": {
+    "hero": {
+      "title": "Каталог продукции",
+      "subtitle": "Высококачественные материалы для вашего бизнеса"
+    },
+    "filters": {
+      "title": "Фильтры",
+      "category": "Категория",
+      "manufacturer": "Производитель",
+      "clear": "Очистить"
+    },
+    "showing": "Показано",
+    "products": "продуктов",
+    "noProducts": "Продукты не найдены",
+    "inStock": "В наличии",
+    "outOfStock": "Нет в наличии",
+    "code": "Код"
+  },
+  "product": {
+    "breadcrumb": {
+      "catalog": "Каталог"
+    },
+    "code": "Артикул",
+    "manufacturer": "Производитель",
+    "inStock": "В наличии",
+    "outOfStock": "Нет в наличии",
+    "description": "Описание",
+    "categories": "Категории",
+    "applications": "Применение",
+    "specs": {
+      "title": "Технические характеристики",
+      "baseMaterial": "Базовый материал",
+      "density": "Плотность",
+      "emissionClass": "Класс эмиссии",
+      "moistureResistance": "Влагостойкость",
+      "surfaceDurability": "Износостойкость поверхности",
+      "printTechnology": "Технология печати",
+      "viscosity": "Вязкость",
+      "openTime": "Открытое время",
+      "fullCureTime": "Время полного отверждения",
+      "package": "Упаковка",
+      "color": "Цвет",
+      "texture": "Текстура"
+    },
+    "formats": {
+      "title": "Доступные форматы",
+      "width": "Ширина",
+      "height": "Высота",
+      "thickness": "Толщина"
+    },
+    "decors": {
+      "title": "Декоры",
+      "code": "Код",
+      "pattern": "Рисунок",
+      "shade": "Оттенок",
+      "textures": "Текстуры"
+    },
+    "related": {
+      "title": "Похожие продукты",
+      "viewAll": "Смотреть все"
+    }
+  },
+  "home": {}
 }

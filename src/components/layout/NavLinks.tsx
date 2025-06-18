@@ -15,7 +15,7 @@ export default function NavLinks() {
     { id: 1, name: t('home'), path: '/' },
     { id: 2, name: t('about'), path: '/about' },
     { id: 3, name: t('news'), path: '/news' },
-    { id: 4, name: t('catalog'), path: '/catalog' },
+    { id: 4, name: t('products'), path: '/products' },
     { id: 5, name: t('contacts'), path: '/contacts' },
   ];
 

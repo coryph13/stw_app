@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Home",
     "about": "About Us",
-    "catalog": "Catalog",
+    "products": "Catalog",
     "news": "News",
     "contacts": "Contacts"
   },
@@ -230,5 +230,68 @@
       "title": "Follow Us on Social Media",
       "followUs": "Follow us for the latest news and updates"
     }
-  }
+  },
+  "products": {
+    "hero": {
+      "title": "Product Catalog",
+      "subtitle": "High-quality materials for your business"
+    },
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "manufacturer": "Manufacturer",
+      "clear": "Clear"
+    },
+    "showing": "Showing",
+    "products": "products",
+    "noProducts": "No products found",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "code": "Code"
+  },
+  "product": {
+    "breadcrumb": {
+      "catalog": "Catalog"
+    },
+    "code": "SKU",
+    "manufacturer": "Manufacturer",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "categories": "Categories",
+    "applications": "Applications",
+    "specs": {
+      "title": "Technical Specifications",
+      "baseMaterial": "Base Material",
+      "density": "Density",
+      "emissionClass": "Emission Class",
+      "moistureResistance": "Moisture Resistance",
+      "surfaceDurability": "Surface Durability",
+      "printTechnology": "Print Technology",
+      "viscosity": "Viscosity",
+      "openTime": "Open Time",
+      "fullCureTime": "Full Cure Time",
+      "package": "Package",
+      "color": "Color",
+      "texture": "Texture"
+    },
+    "formats": {
+      "title": "Available Formats",
+      "width": "Width",
+      "height": "Height",
+      "thickness": "Thickness"
+    },
+    "decors": {
+      "title": "Decors",
+      "code": "Code",
+      "pattern": "Pattern",
+      "shade": "Shade",
+      "textures": "Textures"
+    },
+    "related": {
+      "title": "Related Products",
+      "viewAll": "View All"
+    }
+  },
+  "home": {}
 }
