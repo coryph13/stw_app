@@ -1,38 +1,234 @@
 {
-    "Search": {
-        "placeholder": "Search for products..."
-    },
-    "ProductReviews": {
-        "heading": "Reviews"
-    },
-    "Hello": {
-        "greeting": "Hello"
-    },
-    "NotFound": {
-        "heading": "Page not found!"
-    },
-    "Nav": {
-        "home": "Home",
-        "about": "About",
-        "blog": "Blog",
-        "products": "Products",
-        "contacts": "Contacts",
-        "login": "Login",
-        "sign-up": "Sign Up"
-    },
-    "ProductPage": {
-        "name": "Name",
-        "description": "Description"
-    },
-    "ProductsPage": {
-        "description": "Product List Description"
-    },
-    "Footer": {
-        "Rights": "STW. All rights reserved."
-    },
-    "Locales": {
-        "uz": "Uzbek",
-        "ru": "Russian",
-        "en": "English"
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "catalog": "Catalog",
+    "news": "News",
+    "contacts": "Contacts"
+  },
+  "auth": {
+    "login": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "footer": {
+    "company": "Company",
+    "catalog": "Catalog",
+    "services": "Services",
+    "contacts": "Contacts",
+    "address": "123 Mustakillik St., Tashkent",
+    "phone": "Phone",
+    "email": "Email",
+    "workHours": "Working hours",
+    "workSchedule": "Mon-Fri: 9:00 AM - 6:00 PM",
+    "copyright": "All rights reserved",
+    "navigation": {
+      "about": "About Us",
+      "news": "News",
+      "certificates": "Certificates",
+      "production": "Own Production",
+      "consumer": "Consumer Goods",
+      "industrial": "Industrial Goods",
+      "wholesale": "Wholesale Supply",
+      "logistics": "Logistics",
+      "storage": "Warehouse Services"
     }
+  },
+  "about": {
+    "hero": {
+      "title": "Reliable Partner in Wholesale Supply with {years} Years of Experience",
+      "subtitle": "Own production, wide range of products and delivery throughout the country"
+    },
+    "intro": {
+      "title": "About Company",
+      "paragraph1": "We are one of the largest wholesale suppliers in the Uzbekistan market. Over the years, we have earned a reputation as a reliable partner who always fulfills their obligations.",
+      "paragraph2": "Our company combines its own production and distribution of goods from leading global manufacturers. This allows us to offer customers the optimal price-quality ratio.",
+      "paragraph3": "We constantly expand our range and improve logistics processes so that our customers receive goods quickly and in full.",
+      "areas": {
+        "production": "Own Production",
+        "productionDesc": "Modern production lines and quality control",
+        "distribution": "Distribution",
+        "distributionDesc": "Official distributor of leading brands",
+        "logistics": "Logistics",
+        "logisticsDesc": "Delivery throughout the country"
+      }
+    },
+    "advantages": {
+      "title": "Our Advantages",
+      "items": {
+        "production": {
+          "title": "Own Production",
+          "description": "Full quality control and flexible pricing thanks to our own production facilities"
+        },
+        "assortment": {
+          "title": "Wide Range",
+          "description": "More than 10,000 product items of various categories always in stock"
+        },
+        "warehouse": {
+          "title": "Warehouse Facilities",
+          "description": "15,000 m² of modern warehouse facilities with all storage conditions"
+        },
+        "logistics": {
+          "title": "Logistics and Delivery",
+          "description": "Own fleet and well-established delivery system throughout the country"
+        },
+        "flexible": {
+          "title": "Flexible Terms",
+          "description": "Individual approach to each client, payment deferral and discount system"
+        },
+        "quality": {
+          "title": "Quality Guarantee",
+          "description": "All products are certified and meet international standards"
+        }
+      }
+    },
+    "stats": {
+      "title": "Facts and Figures",
+      "items": {
+        "years": "Years in market",
+        "products": "Product items",
+        "clients": "Regular clients",
+        "warehouse": "Warehouse area",
+        "regions": "Delivery regions",
+        "employees": "Employees"
+      }
+    },
+    "directions": {
+      "title": "Business Areas",
+      "production": {
+        "title": "Own Production",
+        "description": "We produce a wide range of packaging materials and containers",
+        "items": {
+          "packaging": "Packaging materials",
+          "containers": "Plastic containers",
+          "materials": "Consumables"
+        }
+      },
+      "distribution": {
+        "title": "Product Distribution",
+        "description": "Official supplies from global manufacturers",
+        "items": {
+          "consumer": "Consumer goods",
+          "industrial": "Industrial goods",
+          "construction": "Construction materials"
+        }
+      },
+      "logistics": {
+        "title": "Logistics Services",
+        "description": "Full range of storage and delivery services",
+        "items": {
+          "storage": "Responsible storage",
+          "delivery": "Country-wide delivery",
+          "customs": "Customs clearance"
+        }
+      }
+    },
+    "certificates": {
+      "title": "Certificates and Licenses",
+      "description": "All our activities are licensed, products are certified according to international standards"
+    },
+    "clients": {
+      "title": "Our Clients",
+      "description": "The largest companies in the country trust us"
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "production": {
+        "title": "Production Facilities",
+        "description": "Modern equipment and technologies",
+        "stats": {
+          "0": { "label": "Production workshops" },
+          "1": { "label": "Units per month" },
+          "2": { "label": "Product types" }
+        }
+      },
+      "warehouse": {
+        "title": "Warehouse Complexes",
+        "description": "Optimal storage conditions",
+        "stats": {
+          "0": { "label": "Square meters" },
+          "1": { "label": "Temperature zones" },
+          "2": { "label": "Warehouse class" }
+        }
+      },
+      "transport": {
+        "title": "Vehicle Fleet",
+        "description": "Modern transport for delivery",
+        "stats": {
+          "0": { "label": "Transport units" },
+          "1": { "label": "Delivery" },
+          "2": { "label": "Control" }
+        }
+      },
+      "footer": "Our infrastructure allows us to ensure uninterrupted supplies and high quality service"
+    },
+    "cta": {
+      "title": "Become Our Partner",
+      "description": "We are always open to new partnerships and ready to offer favorable cooperation terms",
+      "buttons": {
+        "catalog": "View Catalog",
+        "contact": "Contact Us"
+      },
+      "contacts": {
+        "phone": "Phone",
+        "email": "Email",
+        "hours": "Working hours",
+        "schedule": "Mon-Fri: 9:00 AM - 6:00 PM"
+      }
+    }
+  },
+  "contacts": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We are always ready to answer your questions and suggestions"
+    },
+    "office": {
+      "title": "Head Office",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours"
+    },
+    "managers": {
+      "title": "Our Managers"
+    },
+    "distributors": {
+      "title": "Our Distributors",
+      "allRegions": "All Regions",
+      "workingHours": "Working Hours",
+      "noResults": "No distributors found"
+    },
+    "schedule": {
+      "title": "Working Hours",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed",
+      "note": "Lunch break: 13:00 - 14:00"
+    },
+    "form": {
+      "title": "Write to Us",
+      "name": "Your Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "selectSubject": "Select Subject",
+      "general": "General Inquiry",
+      "partnership": "Partnership",
+      "support": "Technical Support",
+      "complaint": "Complaint",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "map": {
+      "title": "How to Find Us"
+    },
+    "social": {
+      "title": "Follow Us on Social Media",
+      "followUs": "Follow us for the latest news and updates"
+    }
+  }
 }

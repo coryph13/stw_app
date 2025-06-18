@@ -8,14 +8,14 @@ import FilledLink from './FilledLink';
 export default function NavLinks() {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
-  const t = useTranslations('Nav');
+  const t = useTranslations('navigation');
   const locale = useLocale();
 
   const NavLinks = [
     { id: 1, name: t('home'), path: '/' },
     { id: 2, name: t('about'), path: '/about' },
-    { id: 3, name: t('blog'), path: '/blog' },
-    { id: 4, name: t('products'), path: '/products' },
+    { id: 3, name: t('news'), path: '/news' },
+    { id: 4, name: t('catalog'), path: '/catalog' },
     { id: 5, name: t('contacts'), path: '/contacts' },
   ];
 

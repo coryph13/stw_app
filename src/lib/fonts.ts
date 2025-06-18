@@ -1,4 +1,4 @@
-import { Raleway, Inter } from 'next/font/google'
+import { Raleway, Inter, Roboto } from 'next/font/google'
 
 // Настройки для шрифта Raleway (для заголовков)
 export const raleway = Raleway({
@@ -12,4 +12,9 @@ export const inter = Inter({
   weight: ['100', '300', '400', '500', '600', '700'],
   subsets: ['latin', 'cyrillic'],
   variable: '--font-inter', // Это позволит использовать шрифт как переменную в CSS
+});
+
+export const roboto = Roboto({
+    weight: ['100', '300', '400', '500', '700', '900'],
+    subsets: ['latin', 'cyrillic']
 });

@@ -1,33 +1,234 @@
 {
-    "Search": {
-        "placeholder": "Search for products..."
-    },
-    "Hello": {
-        "greeting": "Hello"
-    },
-    "NotFound": {
-        "heading": "Page not found!"
-    },
-    "Nav": {
-        "home": "Главная",
-        "about": "О нас",
-        "blog": "Блог",
-        "products": "Продукты",
-        "contacts": "Контакты",
-        "login": "Войти",
-        "sign-up": "Регистрация"
-    },
-    "ProductReviews": {
-        "heading": "Reviews"
-    },
-    "ProductPage": {
-        "name": "Name",
-        "description": "Description"
-    },
-    "ProductsPage": {
-        "description": "Product List Description"
-    },
-    "Footer": {
-        "Rights": "STW. All rights reserved."
+  "navigation": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "catalog": "Katalog",
+    "news": "Yangiliklar",
+    "contacts": "Aloqa"
+  },
+  "auth": {
+    "login": "Kirish",
+    "signUp": "Ro'yxatdan o'tish"
+  },
+  "footer": {
+    "company": "Kompaniya",
+    "catalog": "Katalog",
+    "services": "Xizmatlar",
+    "contacts": "Aloqa",
+    "address": "Toshkent sh., Mustaqillik ko'ch., 123",
+    "phone": "Telefon",
+    "email": "Email",
+    "workHours": "Ish vaqti",
+    "workSchedule": "Dush-Jum: 9:00 - 18:00",
+    "copyright": "Barcha huquqlar himoyalangan",
+    "navigation": {
+      "about": "Biz haqimizda",
+      "news": "Yangiliklar",
+      "certificates": "Sertifikatlar",
+      "production": "O'z ishlab chiqarish",
+      "consumer": "Xalq iste'moli tovarlari",
+      "industrial": "Sanoat tovarlari",
+      "wholesale": "Ulgurji yetkazib berish",
+      "logistics": "Logistika",
+      "storage": "Ombor xizmatlari"
     }
+  },
+  "about": {
+    "hero": {
+      "title": "Ulgurji yetkazib berishda {years} yillik tajribaga ega ishonchli hamkor",
+      "subtitle": "O'z ishlab chiqarish, keng assortiment va butun mamlakat bo'ylab yetkazib berish"
+    },
+    "intro": {
+      "title": "Kompaniya haqida",
+      "paragraph1": "Biz O'zbekiston bozoridagi eng yirik ulgurji yetkazib beruvchilardan birimiz. Yillar davomida biz doimo o'z majburiyatlarini bajaradigan ishonchli hamkor sifatida obro' qozondik.",
+      "paragraph2": "Kompaniyamiz o'z ishlab chiqarishini va dunyoning yetakchi ishlab chiqaruvchilaridan tovarlarni tarqatishni birlashtiradi. Bu bizga mijozlarga optimal narx-sifat nisbatini taklif qilish imkonini beradi.",
+      "paragraph3": "Biz doimiy ravishda assortimentni kengaytiramiz va logistika jarayonlarini yaxshilaymiz, shunda mijozlarimiz tovarlarni tez va to'liq hajmda olishadi.",
+      "areas": {
+        "production": "O'z ishlab chiqarish",
+        "productionDesc": "Zamonaviy ishlab chiqarish liniyalari va sifat nazorati",
+        "distribution": "Tarqatish",
+        "distributionDesc": "Yetakchi brendlarning rasmiy distribyutori",
+        "logistics": "Logistika",
+        "logisticsDesc": "Butun mamlakat bo'ylab yetkazib berish"
+      }
+    },
+    "advantages": {
+      "title": "Bizning afzalliklarimiz",
+      "items": {
+        "production": {
+          "title": "O'z ishlab chiqarish",
+          "description": "O'z ishlab chiqarish quvvatlarimiz tufayli to'liq sifat nazorati va moslashuvchan narxlash"
+        },
+        "assortment": {
+          "title": "Keng assortiment",
+          "description": "Har doim omborda turli toifadagi 10 000 dan ortiq mahsulot nomlari"
+        },
+        "warehouse": {
+          "title": "Ombor quvvatlari",
+          "description": "Barcha saqlash shartlariga rioya qilgan holda 15 000 m² zamonaviy ombor binolari"
+        },
+        "logistics": {
+          "title": "Logistika va yetkazib berish",
+          "description": "O'z avtoparki va butun mamlakat bo'ylab yaxshi yo'lga qo'yilgan yetkazib berish tizimi"
+        },
+        "flexible": {
+          "title": "Moslashuvchan shartlar",
+          "description": "Har bir mijozga individual yondashuv, to'lovni kechiktirish va chegirma tizimi"
+        },
+        "quality": {
+          "title": "Sifat kafolati",
+          "description": "Barcha mahsulotlar sertifikatlangan va xalqaro standartlarga javob beradi"
+        }
+      }
+    },
+    "stats": {
+      "title": "Raqamlar va faktlar",
+      "items": {
+        "years": "Bozorda faoliyat yillari",
+        "products": "Mahsulot turlari",
+        "clients": "Doimiy mijozlar",
+        "warehouse": "Ombor maydoni",
+        "regions": "Yetkazib berish hududlari",
+        "employees": "Xodimlar"
+      }
+    },
+    "directions": {
+      "title": "Faoliyat yo'nalishlari",
+      "production": {
+        "title": "O'z ishlab chiqarish",
+        "description": "Biz qadoqlash materiallari va idishlarning keng spektrini ishlab chiqaramiz",
+        "items": {
+          "packaging": "Qadoqlash materiallari",
+          "containers": "Plastik idishlar",
+          "materials": "Sarf materiallari"
+        }
+      },
+      "distribution": {
+        "title": "Mahsulotlarni tarqatish",
+        "description": "Jahon ishlab chiqaruvchilaridan rasmiy yetkazib berish",
+        "items": {
+          "consumer": "Xalq iste'moli tovarlari",
+          "industrial": "Sanoat tovarlari",
+          "construction": "Qurilish materiallari"
+        }
+      },
+      "logistics": {
+        "title": "Logistika xizmatlari",
+        "description": "Saqlash va yetkazib berish bo'yicha to'liq xizmatlar majmuasi",
+        "items": {
+          "storage": "Mas'uliyatli saqlash",
+          "delivery": "Mamlakat bo'ylab yetkazib berish",
+          "customs": "Bojxona rasmiylashtiruvi"
+        }
+      }
+    },
+    "certificates": {
+      "title": "Sertifikatlar va litsenziyalar",
+      "description": "Bizning barcha faoliyatimiz litsenziyalangan, mahsulotlar xalqaro standartlarga muvofiq sertifikatlangan"
+    },
+    "clients": {
+      "title": "Bizning mijozlarimiz",
+      "description": "Mamlakatning eng yirik kompaniyalari bizga ishonadi"
+    },
+    "infrastructure": {
+      "title": "Infratuzilma",
+      "production": {
+        "title": "Ishlab chiqarish quvvatlari",
+        "description": "Zamonaviy uskunalar va texnologiyalar",
+        "stats": {
+          "0": { "label": "Ishlab chiqarish sexlari" },
+          "1": { "label": "Oylik mahsulot birligi" },
+          "2": { "label": "Mahsulot turlari" }
+        }
+      },
+      "warehouse": {
+        "title": "Ombor majmualari",
+        "description": "Optimal saqlash shartlari",
+        "stats": {
+          "0": { "label": "Kvadrat metr" },
+          "1": { "label": "Harorat zonalari" },
+          "2": { "label": "Ombor sinfi" }
+        }
+      },
+      "transport": {
+        "title": "Avtopark",
+        "description": "Yetkazib berish uchun zamonaviy transport",
+        "stats": {
+          "0": { "label": "Transport birliklari" },
+          "1": { "label": "Yetkazib berish" },
+          "2": { "label": "Nazorat" }
+        }
+      },
+      "footer": "Bizning infratuzilmamiz uzluksiz yetkazib berish va yuqori sifatli xizmat ko'rsatishni ta'minlash imkonini beradi"
+    },
+    "cta": {
+      "title": "Bizning hamkorimiz bo'ling",
+      "description": "Biz har doim yangi hamkorlik munosabatlariga ochiqmiz va qulay hamkorlik shartlarini taklif qilishga tayyormiz",
+      "buttons": {
+        "catalog": "Katalogni ko'rish",
+        "contact": "Biz bilan bog'lanish"
+      },
+      "contacts": {
+        "phone": "Telefon",
+        "email": "Email",
+        "hours": "Ish vaqti",
+        "schedule": "Dush-Jum: 9:00 - 18:00"
+      }
+    }
+  },
+  "contacts": {
+    "hero": {
+      "title": "Biz bilan bog'laning",
+      "subtitle": "Biz har doim sizning savollaringiz va takliflaringizga javob berishga tayyormiz"
+    },
+    "office": {
+      "title": "Bosh ofis",
+      "address": "Manzil",
+      "phone": "Telefon",
+      "email": "Email",
+      "hours": "Ish vaqti"
+    },
+    "managers": {
+      "title": "Bizning menejerlarimiz"
+    },
+    "distributors": {
+      "title": "Bizning distribyutorlarimiz",
+      "allRegions": "Barcha hududlar",
+      "workingHours": "Ish vaqti",
+      "noResults": "Distribyutorlar topilmadi"
+    },
+    "schedule": {
+      "title": "Ish vaqti",
+      "monday": "Dushanba",
+      "tuesday": "Seshanba",
+      "wednesday": "Chorshanba",
+      "thursday": "Payshanba",
+      "friday": "Juma",
+      "saturday": "Shanba",
+      "sunday": "Yakshanba",
+      "closed": "Dam olish kuni",
+      "note": "Tushlik tanaffusi: 13:00 - 14:00"
+    },
+    "form": {
+      "title": "Bizga yozing",
+      "name": "Sizning ismingiz",
+      "email": "Email",
+      "phone": "Telefon",
+      "subject": "Mavzu",
+      "selectSubject": "Mavzuni tanlang",
+      "general": "Umumiy savol",
+      "partnership": "Hamkorlik",
+      "support": "Texnik yordam",
+      "complaint": "Shikoyat",
+      "message": "Xabar",
+      "send": "Xabar yuborish"
+    },
+    "map": {
+      "title": "Bizni qanday topish mumkin"
+    },
+    "social": {
+      "title": "Biz ijtimoiy tarmoqlarda",
+      "followUs": "So'nggi yangiliklar va yangilanishlar uchun bizga obuna bo'ling"
+    }
+  }
 }
