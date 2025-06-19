@@ -8,7 +8,7 @@ import { useLocale } from 'next-intl';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
 
 export default function RegisterForm() {
-  const t = useTranslations('Auth');
+  const t = useTranslations('аuth');
   const locale = useLocale();
   const { register, loading, error, setError } = useAuth(locale);
   
@@ -44,7 +44,7 @@ export default function RegisterForm() {
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formatted = formatPhoneNumber(e.target.value);
-    setFormData(prev => ({ ...prev, phone: formatted }));
+    setFormData(prev => ({ ...prev, login: formatted }));
     if (error) setError(null);
   };
 

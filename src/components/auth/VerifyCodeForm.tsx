@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { IoArrowBack, IoRefresh } from 'react-icons/io5';
 
 export default function VerifyCodeForm() {
-  const t = useTranslations('Auth');
+  const t = useTranslations('auth');
   const locale = useLocale();
   const router = useRouter();
   const { verifyCode, resendCode, loading, error, setError } = useAuth(locale);
