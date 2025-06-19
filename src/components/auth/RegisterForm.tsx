@@ -8,7 +8,7 @@ import { useLocale } from 'next-intl';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
 
 export default function RegisterForm() {
-  const t = useTranslations('auth');
+  const t = useTranslations('Auth');
   const locale = useLocale();
   const { register, loading, error, setError } = useAuth(locale);
   
@@ -20,10 +20,37 @@ export default function RegisterForm() {
     confirmPassword: ''
   });
 
+  // Форматирование номера телефона
+  const formatPhoneNumber = (value: string) => {
+    // Удаляем все нецифровые символы
+    const numbers = value.replace(/\D/g, '');
+    
+    // Ограничиваем до 12 цифр (998 + 9 цифр)
+    const limited = numbers.slice(0, 12);
+    
+    // Форматируем как +998 XX XXX XX XX
+    if (limited.length <= 3) {
+      return limited;
+    } else if (limited.length <= 5) {
+      return `${limited.slice(0, 3)} ${limited.slice(3)}`;
+    } else if (limited.length <= 8) {
+      return `${limited.slice(0, 3)} ${limited.slice(3, 5)} ${limited.slice(5)}`;
+    } else if (limited.length <= 10) {
+      return `${limited.slice(0, 3)} ${limited.slice(3, 5)} ${limited.slice(5, 8)} ${limited.slice(8)}`;
+    } else {
+      return `${limited.slice(0, 3)} ${limited.slice(3, 5)} ${limited.slice(5, 8)} ${limited.slice(8, 10)} ${limited.slice(10)}`;
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value);
+    setFormData(prev => ({ ...prev, phone: formatted }));
+    if (error) setError(null);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Очищаем ошибку при изменении полей
     if (error) setError(null);
   };
 
@@ -41,17 +68,19 @@ export default function RegisterForm() {
       return;
     }
 
+    // Проверка номера телефона (должен быть 12 цифр)
+    const phoneDigits = formData.login.replace(/\D/g, '');
+    if (phoneDigits.length !== 12 || !phoneDigits.startsWith('998')) {
+      setError(t('errors.invalidPhone'));
+      return;
+    }
+
     try {
-      const result = await register({
+      await register({
         name: formData.name,
-        login: formData.login,
+        login: phoneDigits, // Отправляем только цифры
         password: formData.password
       });
-      
-      // Показываем сообщение об успешной регистрации
-      if (result.message) {
-        alert(result.message);
-      }
     } catch (err) {
       // Ошибка уже обработана в хуке
     }
@@ -76,21 +105,29 @@ export default function RegisterForm() {
         />
       </div>
 
-      {/* Логин */}
+      {/* Номер телефона */}
       <div>
         <label htmlFor="login" className="block text-sm font-medium mb-2">
           {t('fields.login')} *
         </label>
-        <input
-          type="text"
-          id="login"
-          name="login"
-          value={formData.login}
-          onChange={handleChange}
-          required
-          className="w-full px-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:border-accent transition-colors"
-          placeholder={t('placeholders.login')}
-        />
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <span className="text-gray">+</span>
+          </div>
+          <input
+            type="tel"
+            id="login"
+            name="login"
+            value={formData.login}
+            onChange={handlePhoneChange}
+            required
+            className="w-full pl-8 pr-4 py-2 rounded-lg border border-border bg-background focus:outline-none focus:border-accent transition-colors"
+            placeholder="998 XX XXX XX XX"
+          />
+        </div>
+        <p className="mt-1 text-xs text-text-muted">
+          {t('helpers.phoneFormat')}
+        </p>
       </div>
 
       {/* Пароль */}
@@ -144,6 +181,11 @@ export default function RegisterForm() {
         </div>
       )}
 
+      {/* Информация о коде подтверждения */}
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg text-sm">
+        {t('info.smsCode')}
+      </div>
+
       {/* Кнопка отправки */}
       <button
         type="submit"
@@ -152,6 +194,14 @@ export default function RegisterForm() {
       >
         {loading ? t('buttons.registering') : t('buttons.register')}
       </button>
+
+      {/* Ссылка на вход */}
+      <p className="text-center text-sm text-text-muted">
+        {t('links.alreadyHaveAccount')}{' '}
+        <a href="/login" className="text-accent hover:underline">
+          {t('links.signIn')}
+        </a>
+      </p>
     </form>
   );
 }

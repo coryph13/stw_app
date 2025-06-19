@@ -434,8 +434,10 @@
       "name": "Имя",
       "login": "Логин",
       "email": "Email",
+      "phone": "Номер телефона",
       "password": "Пароль",
       "confirmPassword": "Подтвердите пароль",
+      "code": "Код подтверждения",
       "newPassword": "Новый пароль",
       "currentPassword": "Текущий пароль"
     },
@@ -443,8 +445,10 @@
       "name": "Введите ваше имя",
       "login": "Введите логин",
       "email": "Введите email",
+      "phone": "998 XX XXX XX XX",
       "password": "Введите пароль",
       "confirmPassword": "Повторите пароль",
+      "code": "000000",
       "newPassword": "Введите новый пароль",
       "currentPassword": "Введите текущий пароль"
     },

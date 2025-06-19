@@ -15,8 +15,11 @@ export const REGISTER_MUTATION = gql`
 
 export const VERIFY_REGISTRATION_CODE_MUTATION = gql`
   mutation VerifyRegistrationCode($login: String!, $code: String!) {
-    VerifyRegistrationCode(login: $login, code: $code) {
+    verifyRegistrationCode(login: $login, code: $code) {
       message
+      access_token
+      token_type
+      expires_in
       user {
         id
         name
@@ -59,6 +62,16 @@ export const REQUEST_PASSWORD_RESET_MUTATION = gql`
 
 export const RESET_PASSWORD_MUTATION = gql`
   mutation ResetPassword($login: String!, $code: String!, new_password: String!) {
-    message
+    resetPassword(login: $login, code: $code, new_password: $new_password) {
+      message
+    }
+  }
+`;
+
+export const RESEND_CODE_MUTATION = gql`
+  mutation ResendCode($login: String!) {
+    resendCode(login: $login) {
+      message
+    }
   }
 `;

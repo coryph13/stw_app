@@ -24,6 +24,9 @@ export interface VerifyRegistrationCodeInput {
 
 export interface VerifyRegistrationCodeResponse {
   message: string;
+  access_token: string;
+  token_type: string;
+  expires_in: string;
   user: User;
 }
 
@@ -70,5 +73,13 @@ export interface ResetPasswordInput {
 }
 
 export interface ResetPasswordResponse {
+  message: string;
+}
+
+export interface ResendCodeInput {
+  login: string;
+}
+
+export interface ResendCodeResponse {
   message: string;
 }
