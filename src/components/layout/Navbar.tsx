@@ -18,7 +18,7 @@ import LocaleInline from './LocaleInline';
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations();
+  const t = useTranslations('auth');
 
   useEffect(() => {
     // Закрываем меню при изменении маршрута
@@ -45,8 +45,8 @@ export const Navbar = () => {
 
         {/* Кнопки входа и регистрации для больших экранов */}
         <div className="hidden space-x-4 md:flex">
-          <OutlineLink href="/login">{t('auth.login')}</OutlineLink>
-          <FilledLink href="/register">{t('auth.signUp')}</FilledLink>
+          <OutlineLink href="/auth/login">{t('links.signIn')}</OutlineLink>
+          <FilledLink href="/auth/register">{t('links.signUp')}</FilledLink>
         </div>
 
         {/* Кнопка меню для мобильных экранов */}
@@ -70,8 +70,8 @@ export const Navbar = () => {
           <LocaleInline />
 
           {/* Кнопки входа и регистрации для мобильных экранов */}
-          <OutlineLink href="/login">{t('auth.login')}</OutlineLink>
-          <FilledLink href="/register">{t('auth.signUp')}</FilledLink>
+          <OutlineLink href="/auth/login">{t('links.signIn')}</OutlineLink>
+          <FilledLink href="/auth/register">{t('links.signUp')}</FilledLink>
         </div>
       )}
     </nav>

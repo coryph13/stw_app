@@ -1,12 +1,12 @@
 // src/app/[locale]/(home)/page.tsx
 import HeroSection from '@/components/features/home/HeroSection';
-// import FeaturedProducts from '@/components/features/home/FeaturedProducts';
-// import AboutSection from '@/components/features/home/AboutSection';
-// import CategoriesSection from '@/components/features/home/CategoriesSection';
-// import PartnersSection from '@/components/features/home/PartnersSection';
-// import AdvantagesSection from '@/components/features/home/AdvantagesSection';
-// import NewsSection from '@/components/features/home/NewsSection';
-// import CTASection from '@/components/features/home/CTASection';
+import FeaturedProducts from '@/components/features/home/FeaturedProducts';
+import AboutSection from '@/components/features/home/AboutSection';
+import CategoriesSection from '@/components/features/home/CategoriesSection';
+import PartnersSection from '@/components/features/home/PartnersSection';
+import AdvantagesSection from '@/components/features/home/AdvantagesSection';
+import NewsSection from '@/components/features/home/NewsSection';
+import CTASection from '@/components/features/home/CTASection';
 import { createGraphQLClient } from "@/lib/graphql-client";
 import { GET_PRODUCTS } from "@/graphql/queries/product";
 
@@ -35,25 +35,25 @@ export default async function HomePage({ params }: PageProps) {
       <HeroSection />
       
       {/* О компании */}
-      {/* <AboutSection /> */}
+      <AboutSection />
       
       {/* Категории продуктов */}
-      {/* <CategoriesSection /> */}
+      <CategoriesSection />
       
       {/* Избранные продукты */}
-      {/* <FeaturedProducts products={products?.data?.slice(0, 8) || []} /> */}
+      <FeaturedProducts products={products?.data?.slice(0, 8) || []} />
       
       {/* Преимущества */}
-      {/* <AdvantagesSection /> */}
+      <AdvantagesSection />
       
       {/* Партнеры */}
-      {/* <PartnersSection /> */}
+      <PartnersSection />
       
       {/* Новости */}
-      {/* <NewsSection /> */}
+      <NewsSection />
       
       {/* CTA секция */}
-      {/* <CTASection /> */}
+      <CTASection />
     </main>
   );
 }

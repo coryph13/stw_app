@@ -6,10 +6,6 @@
     "news": "Yangiliklar",
     "contacts": "Aloqa"
   },
-  "auth": {
-    "login": "Kirish",
-    "signUp": "Ro'yxatdan o'tish"
-  },
   "footer": {
     "company": "Kompaniya",
     "catalog": "Katalog",
@@ -293,5 +289,217 @@
       "viewAll": "Hammasini ko'rish"
     }
   },
-  "home": {}
+  "home": {
+    "hero": {
+      "slide1": {
+        "title": "Biznesingiz uchun sifatli materiallar",
+        "subtitle": "LDSP, MDF, stol ustlari va pol qoplamalari keng assortimenti"
+      },
+      "slide2": {
+        "title": "Qurilishda ishonchli hamkor",
+        "subtitle": "O'zbekiston bozorida 15 yildan ortiq muvaffaqiyatli ish"
+      },
+      "slide3": {
+        "title": "Interyer uchun innovatsion yechimlar",
+        "subtitle": "Yetakchi jahon ishlab chiqaruvchilaridan zamonaviy materiallar"
+      },
+      "viewCatalog": "Katalogni ko'rish",
+      "contactUs": "Biz bilan bog'laning"
+    },
+    "about": {
+      "title": "STW kompaniyasi haqida",
+      "description": "STW - O'zbekistonda yuqori sifatli qurilish va pardozlash materiallarining yetakchi yetkazib beruvchisi. Biz dunyoning eng yaxshi ishlab chiqaruvchilaridan keng assortimentdagi mahsulotlarni taklif qilamiz.",
+      "mission": "Bizning vazifamiz - O'zbekiston qurilish sanoatini zamonaviy, ekologik toza va arzon materiallar bilan ta'minlash, mintaqada sifatli qurilish rivojlanishiga hissa qo'shish.",
+      "features": {
+        "quality": "Yuqori sifatli mahsulotlar",
+        "prices": "Raqobatbardosh narxlar",
+        "delivery": "Tez yetkazib berish",
+        "support": "Professional yordam"
+      },
+      "stats": {
+        "yearsExperience": "Yillik tajriba",
+        "clients": "Mamnun mijozlar",
+        "regions": "O'zbekiston hududlari"
+      },
+      "learnMore": "Batafsil ma'lumot"
+    },
+    "categories": {
+      "title": "Mahsulot kategoriyalari",
+      "subtitle": "Kerakli kategoriyani tanlang va loyihangiz uchun ideal yechim toping",
+      "viewProducts": "Mahsulotlarni ko'rish",
+      "viewAllCategories": "Barcha kategoriyalar",
+      "ldsp": {
+        "name": "LDSP",
+        "description": "Laminatlangan yog'och-qirindi plitalar"
+      },
+      "lmdf": {
+        "name": "LMDF",
+        "description": "Laminatlangan MDF plitalar"
+      },
+      "flooring": {
+        "name": "Pol qoplamalari",
+        "description": "Laminat va vinil pollar"
+      },
+      "tabletop": {
+        "name": "Stol ustlari",
+        "description": "Oshxona va mebel stol ustlari"
+      },
+      "mdf": {
+        "name": "MDF",
+        "description": "O'rtacha zichlikdagi tolali plitalar"
+      },
+      "glue": {
+        "name": "Yelim",
+        "description": "Professional yelim tarkiblari"
+      }
+    },
+    "featured": {
+      "title": "Tavsiya etilgan mahsulotlar",
+      "subtitle": "Biznesingiz uchun eng yaxshi takliflar",
+      "tabs": {
+        "new": "Yangiliklar",
+        "popular": "Mashhur",
+        "sale": "Aksiyalar"
+      },
+      "viewAll": "Barcha mahsulotlarni ko'rish",
+      "noProducts": "Mahsulotlar tez orada paydo bo'ladi",
+      "contactUs": "Biz bilan bog'laning"
+    },
+    "advantages": {
+      "title": "Nega bizni tanlashadi",
+      "subtitle": "Biz hamkorlik uchun eng qulay sharoitlarni yaratamiz",
+      "quality": {
+        "title": "Sifat kafolati",
+        "description": "Barcha mahsulotlar sertifikatlangan va xalqaro standartlarga javob beradi"
+      },
+      "delivery": {
+        "title": "Tez yetkazib berish",
+        "description": "O'zbekiston bo'ylab eng qisqa muddatlarda yetkazib berish"
+      },
+      "prices": {
+        "title": "Eng yaxshi narxlar",
+        "description": "Ishlab chiqaruvchilardan vositachilarsiz to'g'ridan-to'g'ri yetkazib berish"
+      },
+      "stock": {
+        "title": "Doim mavjud",
+        "description": "Mashhur tovarlarning doimiy mavjudligi bilan katta ombor"
+      },
+      "eco": {
+        "title": "Ekologik toza",
+        "description": "Sog'ligingiz uchun faqat ekologik toza materiallar"
+      },
+      "support": {
+        "title": "24/7 yordam",
+        "description": "Professional maslahat va texnik yordam"
+      }
+    },
+    "partners": {
+      "title": "Bizning hamkorlarimiz",
+      "subtitle": "Biz faqat tekshirilgan jahon ishlab chiqaruvchilari bilan ishlaymiz",
+      "stats": {
+        "brands": "Jahon brendlari",
+        "countries": "Ishlab chiqaruvchi mamlakatlar",
+        "certified": "Sertifikatlangan mahsulotlar"
+      }
+    },
+    "news": {
+      "title": "Yangiliklar va maqolalar",
+      "subtitle": "Kompaniya va sanoatning so'nggi yangiliklari",
+      "viewAll": "Barcha yangiliklar",
+      "readMore": "Davomini o'qish",
+      "items": {
+        "1": {
+          "title": "2024 yilgi yangi dekor kolleksiyasi",
+          "excerpt": "Yetakchi Yevropa ishlab chiqaruvchilaridan eksklyuziv dekor kolleksiyasi"
+        },
+        "2": {
+          "title": "UzBuild 2024 ko'rgazmasi",
+          "excerpt": "Markaziy Osiyodagi eng katta qurilish ko'rgazmasida bizning stendimizga tashrif buyuring"
+        },
+        "3": {
+          "title": "Eko-materiallar - kelajak trendi",
+          "excerpt": "Qurilish materiallarining yangi ekologik standartlari va sertifikatlash haqida"
+        }
+      }
+    },
+    "cta": {
+      "title": "Hamkorlikni boshlashga tayyormisiz?",
+      "subtitle": "Bugun biz bilan bog'laning va biznesingiz uchun shaxsiy taklifni oling",
+      "getConsultation": "Maslahat olish",
+      "viewCatalog": "Katalogni ko'rish"
+    }
+  },
+  "auth": {
+    "fields": {
+      "name": "Ism",
+      "login": "Login",
+      "email": "Email",
+      "password": "Parol",
+      "confirmPassword": "Parolni tasdiqlang",
+      "newPassword": "Yangi parol",
+      "currentPassword": "Joriy parol"
+    },
+    "placeholders": {
+      "name": "Ismingizni kiriting",
+      "login": "Login kiriting",
+      "email": "Email kiriting",
+      "password": "Parol kiriting",
+      "confirmPassword": "Parolni takrorlang",
+      "newPassword": "Yangi parol kiriting",
+      "currentPassword": "Joriy parolni kiriting"
+    },
+    "buttons": {
+      "register": "Ro'yxatdan o'tish",
+      "registering": "Ro'yxatdan o'tilmoqda...",
+      "login": "Kirish",
+      "loggingIn": "Kirilmoqda...",
+      "logout": "Chiqish",
+      "loggingOut": "Chiqilmoqda...",
+      "resetPassword": "Parolni tiklash",
+      "resetting": "Tiklanmoqda...",
+      "updateProfile": "Profilni yangilash",
+      "updating": "Yangilanmoqda...",
+      "cancel": "Bekor qilish",
+      "back": "Orqaga"
+    },
+    "titles": {
+      "register": "Ro'yxatdan o'tish",
+      "login": "Tizimga kirish",
+      "resetPassword": "Parolni tiklash",
+      "profile": "Profil",
+      "editProfile": "Profilni tahrirlash"
+    },
+    "messages": {
+      "registerSuccess": "Ro'yxatdan muvaffaqiyatli o'tdingiz! Endi tizimga kirishingiz mumkin.",
+      "loginSuccess": "Tizimga muvaffaqiyatli kirdingiz",
+      "logoutSuccess": "Tizimdan chiqdingiz",
+      "resetPasswordSent": "Parolni tiklash bo'yicha ko'rsatmalar emailingizga yuborildi",
+      "passwordResetSuccess": "Parol muvaffaqiyatli o'zgartirildi",
+      "profileUpdated": "Profil muvaffaqiyatli yangilandi"
+    },
+    "errors": {
+      "passwordMismatch": "Parollar mos kelmayapti",
+      "passwordTooShort": "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
+      "invalidCredentials": "Noto'g'ri login yoki parol",
+      "userExists": "Bunday loginga ega foydalanuvchi allaqachon mavjud",
+      "userNotFound": "Foydalanuvchi topilmadi",
+      "invalidToken": "Yaroqsiz yoki muddati o'tgan token",
+      "networkError": "Tarmoq xatosi. Keyinroq urinib ko'ring",
+      "unknownError": "Noma'lum xatolik yuz berdi"
+    },
+    "links": {
+      "forgotPassword": "Parolni unutdingizmi?",
+      "alreadyHaveAccount": "Akkauntingiz bormi?",
+      "dontHaveAccount": "Akkauntingiz yo'qmi?",
+      "signUp": "Ro'yxatdan o'tish",
+      "signIn": "Kirish"
+    },
+    "validation": {
+      "required": "Bu maydon to'ldirilishi shart",
+      "minLength": "Minimal uzunlik: {{min}} belgi",
+      "maxLength": "Maksimal uzunlik: {{max}} belgi",
+      "email": "To'g'ri email kiriting",
+      "alphanumeric": "Faqat harflar va raqamlar"
+    }
+  }
 }

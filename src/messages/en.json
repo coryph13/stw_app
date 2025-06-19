@@ -6,10 +6,6 @@
     "news": "News",
     "contacts": "Contacts"
   },
-  "auth": {
-    "login": "Sign In",
-    "signUp": "Sign Up"
-  },
   "footer": {
     "company": "Company",
     "catalog": "Catalog",
@@ -293,5 +289,217 @@
       "viewAll": "View All"
     }
   },
-  "home": {}
+  "home": {
+    "hero": {
+      "slide1": {
+        "title": "Quality Materials for Your Business",
+        "subtitle": "Wide range of laminated chipboard, MDF, countertops and flooring"
+      },
+      "slide2": {
+        "title": "Reliable Partner in Construction",
+        "subtitle": "Over 15 years of successful work in Uzbekistan market"
+      },
+      "slide3": {
+        "title": "Innovative Interior Solutions",
+        "subtitle": "Modern materials from leading global manufacturers"
+      },
+      "viewCatalog": "View Catalog",
+      "contactUs": "Contact Us"
+    },
+    "about": {
+      "title": "About STW Company",
+      "description": "STW is a leading supplier of high-quality construction and finishing materials in Uzbekistan. We offer a wide range of products from the world's best manufacturers.",
+      "mission": "Our mission is to provide Uzbekistan's construction industry with modern, eco-friendly and affordable materials, contributing to the development of quality construction in the region.",
+      "features": {
+        "quality": "High quality products",
+        "prices": "Competitive prices",
+        "delivery": "Fast delivery",
+        "support": "Professional support"
+      },
+      "stats": {
+        "yearsExperience": "Years in market",
+        "clients": "Satisfied clients",
+        "regions": "Regions of Uzbekistan"
+      },
+      "learnMore": "Learn More"
+    },
+    "categories": {
+      "title": "Product Categories",
+      "subtitle": "Choose the right category and find the perfect solution for your project",
+      "viewProducts": "View Products",
+      "viewAllCategories": "All Categories",
+      "ldsp": {
+        "name": "Laminated Chipboard",
+        "description": "High-quality laminated chipboard panels"
+      },
+      "lmdf": {
+        "name": "Laminated MDF",
+        "description": "Premium laminated MDF boards"
+      },
+      "flooring": {
+        "name": "Flooring",
+        "description": "Laminate and vinyl flooring"
+      },
+      "tabletop": {
+        "name": "Countertops",
+        "description": "Kitchen and furniture countertops"
+      },
+      "mdf": {
+        "name": "MDF",
+        "description": "Medium-density fiberboard"
+      },
+      "glue": {
+        "name": "Adhesives",
+        "description": "Professional adhesive compounds"
+      }
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Best offers for your business",
+      "tabs": {
+        "new": "New",
+        "popular": "Popular",
+        "sale": "Sale"
+      },
+      "viewAll": "View All Products",
+      "noProducts": "Products coming soon",
+      "contactUs": "Contact Us"
+    },
+    "advantages": {
+      "title": "Why Choose Us",
+      "subtitle": "We create the most comfortable conditions for cooperation",
+      "quality": {
+        "title": "Quality Guarantee",
+        "description": "All products are certified and meet international standards"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Delivery throughout Uzbekistan in the shortest time"
+      },
+      "prices": {
+        "title": "Best Prices",
+        "description": "Direct supplies from manufacturers without intermediaries"
+      },
+      "stock": {
+        "title": "Always in Stock",
+        "description": "Large warehouse with constant availability of popular items"
+      },
+      "eco": {
+        "title": "Eco-Friendly",
+        "description": "Only environmentally friendly materials for your health"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Professional consultation and technical support"
+      }
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "We work only with proven global manufacturers",
+      "stats": {
+        "brands": "Global Brands",
+        "countries": "Manufacturing Countries",
+        "certified": "Certified Products"
+      }
+    },
+    "news": {
+      "title": "News & Articles",
+      "subtitle": "Latest company and industry news",
+      "viewAll": "All News",
+      "readMore": "Read More",
+      "items": {
+        "1": {
+          "title": "New Decor Collection 2024",
+          "excerpt": "Introducing exclusive decor collection from leading European manufacturers"
+        },
+        "2": {
+          "title": "UzBuild 2024 Exhibition",
+          "excerpt": "Visit our booth at Central Asia's largest construction exhibition"
+        },
+        "3": {
+          "title": "Eco-Materials - Future Trend",
+          "excerpt": "Learn about new environmental standards and certification of building materials"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Cooperation?",
+      "subtitle": "Contact us today and get a personalized offer for your business",
+      "getConsultation": "Get Consultation",
+      "viewCatalog": "View Catalog"
+    }
+  },
+  "auth": {
+    "fields": {
+      "name": "Name",
+      "login": "Login",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "newPassword": "New Password",
+      "currentPassword": "Current Password"
+    },
+    "placeholders": {
+      "name": "Enter your name",
+      "login": "Enter login",
+      "email": "Enter email",
+      "password": "Enter password",
+      "confirmPassword": "Repeat password",
+      "newPassword": "Enter new password",
+      "currentPassword": "Enter current password"
+    },
+    "buttons": {
+      "register": "Register",
+      "registering": "Registering...",
+      "login": "Sign In",
+      "loggingIn": "Signing In...",
+      "logout": "Sign Out",
+      "loggingOut": "Signing Out...",
+      "resetPassword": "Reset Password",
+      "resetting": "Resetting...",
+      "updateProfile": "Update Profile",
+      "updating": "Updating...",
+      "cancel": "Cancel",
+      "back": "Back"
+    },
+    "titles": {
+      "register": "Registration",
+      "login": "Sign In",
+      "resetPassword": "Password Recovery",
+      "profile": "Profile",
+      "editProfile": "Edit Profile"
+    },
+    "messages": {
+      "registerSuccess": "Registration successful! You can now sign in.",
+      "loginSuccess": "Successfully signed in",
+      "logoutSuccess": "You have been signed out",
+      "resetPasswordSent": "Password reset instructions have been sent to your email",
+      "passwordResetSuccess": "Password successfully changed",
+      "profileUpdated": "Profile successfully updated"
+    },
+    "errors": {
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "invalidCredentials": "Invalid login or password",
+      "userExists": "User with this login already exists",
+      "userNotFound": "User not found",
+      "invalidToken": "Invalid or expired token",
+      "networkError": "Network error. Please try later",
+      "unknownError": "An unknown error occurred"
+    },
+    "links": {
+      "forgotPassword": "Forgot password?",
+      "alreadyHaveAccount": "Already have an account?",
+      "dontHaveAccount": "Don't have an account?",
+      "signUp": "Sign Up",
+      "signIn": "Sign In"
+    },
+    "validation": {
+      "required": "This field is required",
+      "minLength": "Minimum length: {{min}} characters",
+      "maxLength": "Maximum length: {{max}} characters",
+      "email": "Enter a valid email",
+      "alphanumeric": "Only letters and numbers"
+    }
+  }
 }
