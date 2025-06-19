@@ -8,7 +8,7 @@ import { useLocale } from 'next-intl';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
 
 export default function RegisterForm() {
-  const t = useTranslations('аuth');
+  const t = useTranslations('auth');
   const locale = useLocale();
   const { register, loading, error, setError } = useAuth(locale);
   
