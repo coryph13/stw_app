@@ -1,5 +1,4 @@
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+// import { useTranslations } from 'next-intl';
 
 import { AboutAdvantages } from '@/components/features/about/AboutAdvantages';
 import { AboutCTA } from '@/components/features/about/AboutCTA';
@@ -12,7 +11,7 @@ import { AboutIntro } from '@/components/features/about/AboutIntro';
 import { AboutStats } from '@/components/features/about/AboutStats';
 
 export default function AboutPage() {
-  const t = useTranslations('about');
+  // const t = useTranslations('about');
 
   return (
     <main className="min-h-screen bg-background">

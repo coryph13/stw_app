@@ -2,7 +2,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const partners = [
   { id: 1, name: 'Kronospan', logo: '/logos/kronospan.png' },

@@ -4,7 +4,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { IoCalendar, IoArrowForward } from 'react-icons/io5';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const news = [
   {

@@ -8,12 +8,20 @@ import ProductSpecifications from "@/components/features/product/ProductSpecific
 import ProductFormats from "@/components/features/product/ProductFormats";
 import ProductDecors from "@/components/features/product/ProductDecors";
 import RelatedProducts from "@/components/features/product/RelatedProducts";
+import { ISpec } from "@/types/spec";
 
 interface PageProps {
-  params: {
-    locale: string;
-    slug: string;
-  };
+    params: Promise<{
+        locale: string;
+        slug: string;
+    }>;
+}
+
+function specHasProperty<T extends string>(
+    spec: ISpec, 
+    property: T
+): spec is ISpec & Record<T, any> {
+    return property in spec && (spec as any)[property] != null;
 }
 
 export default async function ProductPage({ params }: PageProps) {
@@ -45,13 +53,13 @@ export default async function ProductPage({ params }: PageProps) {
       <ProductHero product={product} />
       
       {/* Декоры, если есть */}
-      {product.specs?.decor && (
+      {specHasProperty(product.specs, 'decor') && (
         <ProductDecors decors={[product.specs.decor]} />
       )}
       
       {/* Форматы */}
-      {product.specs?.formats && product.specs.formats.length > 0 && (
-        <ProductFormats formats={product.specs.formats} />
+      {specHasProperty(product.specs, 'formats') && product.specs.formats.length > 0 && (
+          <ProductFormats formats={product.specs.formats} />
       )}
       
       {/* Технические характеристики */}

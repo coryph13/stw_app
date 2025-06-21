@@ -9,19 +9,15 @@ import NewsSection from '@/components/features/home/NewsSection';
 import CTASection from '@/components/features/home/CTASection';
 import { createGraphQLClient } from "@/lib/graphql-client";
 import { GET_PRODUCTS } from "@/graphql/queries/product";
+import { IProduct } from '@/types/product';
+import { getLocale } from 'next-intl/server';
 
-interface PageProps {
-  params: {
-    locale: string;
-  };
-}
-
-export default async function HomePage({ params }: PageProps) {
-  const { locale } = await params;
+export default async function HomePage() {
+  const locale = await getLocale();
   
   // Получаем избранные продукты для главной страницы
   const graphqlClient = createGraphQLClient(locale);
-  const { products } = await graphqlClient.request<{ products: { data: any[] } }>(
+  const { products } = await graphqlClient.request<{ products: { data: IProduct[] } }>(
     GET_PRODUCTS,
     { 
       // Можно добавить фильтры для получения только избранных продуктов

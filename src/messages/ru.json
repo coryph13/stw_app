@@ -501,5 +501,10 @@
       "email": "To'g'ri email kiriting",
       "alphanumeric": "Faqat harflar va raqamlar"
     }
+  },
+  "notFound": {
+    "heading": "Страница не найдена!",
+    "message": "Страница, которую вы ищете, не существует.",
+    "backHome": "Вернуться на главную"
   }
 }

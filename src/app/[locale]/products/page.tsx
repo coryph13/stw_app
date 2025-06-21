@@ -8,24 +8,25 @@ import ProductsGrid from "@/components/features/products/ProductsGrid";
 import ProductsHero from "@/components/features/products/ProductsHero";
 
 interface PageProps {
-  params: {
-    locale: string;
-  };
-  searchParams: {
-    category?: string;
-    manufacturer?: string;
-  };
+    params: Promise<{
+        locale: string;
+    }>;
+    searchParams: Promise<{
+        category?: string;
+        manufacturer?: string;
+    }>;
 }
 
-export default async function ProductsPage({ params, searchParams }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
   const { locale } = await params;
+  const { category, manufacturer } = await searchParams;
   const graphqlClient = createGraphQLClient(locale);
   
   const { products } = await graphqlClient.request<{ products: { data: IProduct[] } }>(
     GET_PRODUCTS,
     {
-      categorySlug: searchParams.category || undefined,
-      manufacturerSlug: searchParams.manufacturer || undefined,
+      categorySlug: category || undefined,
+      manufacturerSlug: manufacturer || undefined,
     }
   );
 

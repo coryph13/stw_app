@@ -6,6 +6,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
+import { Link } from '@/i18n/routing';
 
 export default function RegisterForm() {
   const t = useTranslations('auth');
@@ -83,6 +84,7 @@ export default function RegisterForm() {
       });
     } catch (err) {
       // Ошибка уже обработана в хуке
+      console.log(err);
     }
   };
 
@@ -198,9 +200,9 @@ export default function RegisterForm() {
       {/* Ссылка на вход */}
       <p className="text-center text-sm text-text-muted">
         {t('links.alreadyHaveAccount')}{' '}
-        <a href="/login" className="text-accent hover:underline">
+        <Link href="/login" className="text-accent hover:underline">
           {t('links.signIn')}
-        </a>
+        </Link>
       </p>
     </form>
   );

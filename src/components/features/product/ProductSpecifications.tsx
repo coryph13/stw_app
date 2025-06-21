@@ -1,10 +1,12 @@
 // src/components/product/ProductSpecifications.tsx
 'use client';
 
+import { specHasProperty } from '@/lib/utils/specs';
+import { ISpec } from '@/types/spec';
 import { useTranslations } from 'next-intl';
 
 interface ProductSpecificationsProps {
-  specs: any; // Используем any для гибкости с разными типами спецификаций
+  specs: ISpec; // Используем any для гибкости с разными типами спецификаций
 }
 
 export default function ProductSpecifications({ specs }: ProductSpecificationsProps) {
@@ -12,13 +14,16 @@ export default function ProductSpecifications({ specs }: ProductSpecificationsPr
 
   if (!specs) return null;
 
-  // Функция для получения отображаемого значения
-  const getSpecValue = (spec: any) => {
-    if (!spec) return '-';
-    if (typeof spec === 'object' && spec.value) {
-      return spec.description || spec.value;
+  // Функция для получения отображаемого значения свойства спецификации
+  const getSpecValue = (specProperty: any) => {
+    if (!specProperty) return '-';
+    if (typeof specProperty === 'object' && 'value' in specProperty) {
+      return specProperty.description || specProperty.value;
     }
-    return spec;
+    if (typeof specProperty === 'string' || typeof specProperty === 'number') {
+      return specProperty;
+    }
+    return '-';
   };
 
   // Базовые характеристики, общие для многих типов продуктов
@@ -45,7 +50,9 @@ export default function ProductSpecifications({ specs }: ProductSpecificationsPr
     : commonSpecs;
 
   // Фильтруем только существующие характеристики
-  const availableSpecs = specsToShow.filter(spec => specs[spec.key]);
+  const availableSpecs = specsToShow.filter(spec => 
+    spec.key in specs && (specs as any)[spec.key] != null
+  );
 
   if (availableSpecs.length === 0) return null;
 
@@ -68,13 +75,13 @@ export default function ProductSpecifications({ specs }: ProductSpecificationsPr
                     {spec.label}
                   </td>
                   <td className="px-6 py-4">
-                    {getSpecValue(specs[spec.key])}
+                    {getSpecValue((specs as any)[spec.key])}
                   </td>
                 </tr>
               ))}
               
               {/* Цвет для клея */}
-              {specs.color && (
+              {specHasProperty(specs, 'color') && (
                 <tr className="border-b border-border">
                   <td className="px-6 py-4 font-medium w-1/2">
                     {t('specs.color')}
@@ -86,7 +93,7 @@ export default function ProductSpecifications({ specs }: ProductSpecificationsPr
               )}
               
               {/* Текстура */}
-              {specs.texture && (
+              {specHasProperty(specs, 'texture') && (
                 <tr className="border-b border-border">
                   <td className="px-6 py-4 font-medium w-1/2">
                     {t('specs.texture')}

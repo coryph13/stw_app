@@ -26,11 +26,11 @@ export default function LocaleDropdown() {
         className="flex items-center gap-2 rounded-full border border-border p-1 transition hover:opacity-80"
       >
         <ReactCountryFlag
-          countryCode={countries[currentLocale].code}
+          countryCode={countries[currentLocale as keyof typeof countries].code}
           svg
           className="rounded-full object-cover"
           style={{ width: '2rem', height: '2rem' }}
-          title={countries[currentLocale].name}
+          title={countries[currentLocale as keyof typeof countries].name}
         />
       </button>
 

@@ -6,9 +6,10 @@ import { Link } from '@/i18n/routing';
 import ProductCard from '@/components/features/products/ProductCard';
 import { IoArrowForward } from 'react-icons/io5';
 import { useState } from 'react';
+import { IProduct } from '@/types/product';
 
 interface FeaturedProductsProps {
-  products: any[];
+  products: IProduct[];
 }
 
 export default function FeaturedProducts({ products }: FeaturedProductsProps) {

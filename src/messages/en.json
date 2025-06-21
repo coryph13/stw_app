@@ -522,5 +522,10 @@
       "email": "Enter a valid email",
       "alphanumeric": "Only letters and numbers"
     }
+  },
+  "notFound": {
+    "heading": "Page not found!",
+    "message": "The page you are looking for does not exist.",
+    "backHome": "Back to Home"
   }
 }

@@ -2,8 +2,8 @@
 
 import { Link, usePathname } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
-import OutlineLink from './OutlineLink';
-import FilledLink from './FilledLink';
+// import OutlineLink from './OutlineLink';
+// import FilledLink from './FilledLink';
 
 export default function NavLinks() {
   const pathname = usePathname();

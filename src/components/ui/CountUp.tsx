@@ -29,9 +29,10 @@ export default function CountUp({ end, duration = 2000, suffix = '', prefix = ''
       observer.observe(countRef.current);
     }
 
+    const currentCountRef = countRef.current;
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (currentCountRef) {
+        observer.unobserve(currentCountRef);
       }
     };
   }, []);

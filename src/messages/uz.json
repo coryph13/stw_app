@@ -522,5 +522,10 @@
       "email": "To'g'ri email kiriting",
       "alphanumeric": "Faqat harflar va raqamlar"
     }
+  },
+  "notFound": {
+    "heading": "Sahifa topilmadi!",
+    "message": "Siz qidirayotgan sahifa mavjud emas.",
+    "backHome": "Bosh sahifaga qaytish"
   }
 }

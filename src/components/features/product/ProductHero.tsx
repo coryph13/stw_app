@@ -4,7 +4,7 @@
 import { IProduct } from "@/types/product";
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { IoCheckmarkCircle, IoCloseCircle, IoArrowBack } from 'react-icons/io5';
+import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
 import { Link } from '@/i18n/routing';
 
 interface ProductHeroProps {
