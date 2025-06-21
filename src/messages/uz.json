@@ -434,8 +434,10 @@
       "name": "Ism",
       "login": "Login",
       "email": "Email",
+      "phone": "Telefon raqami",
       "password": "Parol",
       "confirmPassword": "Parolni tasdiqlang",
+      "code": "Tasdiqlash kodi",
       "newPassword": "Yangi parol",
       "currentPassword": "Joriy parol"
     },
@@ -443,8 +445,10 @@
       "name": "Ismingizni kiriting",
       "login": "Login kiriting",
       "email": "Email kiriting",
+      "phone": "998 XX XXX XX XX",
       "password": "Parol kiriting",
       "confirmPassword": "Parolni takrorlang",
+      "code": "000000",
       "newPassword": "Yangi parol kiriting",
       "currentPassword": "Joriy parolni kiriting"
     },
@@ -455,6 +459,9 @@
       "loggingIn": "Kirilmoqda...",
       "logout": "Chiqish",
       "loggingOut": "Chiqilmoqda...",
+      "verify": "Tasdiqlash",
+      "verifying": "Tekshirilmoqda...",
+      "resendCode": "Kodni qayta yuborish",
       "resetPassword": "Parolni tiklash",
       "resetting": "Tiklanmoqda...",
       "updateProfile": "Profilni yangilash",
@@ -465,6 +472,7 @@
     "titles": {
       "register": "Ro'yxatdan o'tish",
       "login": "Tizimga kirish",
+      "verifyCode": "Telefon raqamini tasdiqlash",
       "resetPassword": "Parolni tiklash",
       "profile": "Profil",
       "editProfile": "Profilni tahrirlash"
@@ -473,6 +481,9 @@
       "registerSuccess": "Ro'yxatdan muvaffaqiyatli o'tdingiz! Endi tizimga kirishingiz mumkin.",
       "loginSuccess": "Tizimga muvaffaqiyatli kirdingiz",
       "logoutSuccess": "Tizimdan chiqdingiz",
+      "codeSent": "Tasdiqlash kodi yuborildi",
+      "resendIn": "Qayta yuborish",
+      "seconds": "soniyadan keyin",
       "resetPasswordSent": "Parolni tiklash bo'yicha ko'rsatmalar emailingizga yuborildi",
       "passwordResetSuccess": "Parol muvaffaqiyatli o'zgartirildi",
       "profileUpdated": "Profil muvaffaqiyatli yangilandi"
@@ -480,12 +491,22 @@
     "errors": {
       "passwordMismatch": "Parollar mos kelmayapti",
       "passwordTooShort": "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
+      "invalidPhone": "Telefon raqami formati noto'g'ri",
+      "incompleteCode": "To'liq kodni kiriting",
       "invalidCredentials": "Noto'g'ri login yoki parol",
-      "userExists": "Bunday loginga ega foydalanuvchi allaqachon mavjud",
+      "userExists": "Bu telefon raqamiga ega foydalanuvchi allaqachon mavjud",
       "userNotFound": "Foydalanuvchi topilmadi",
       "invalidToken": "Yaroqsiz yoki muddati o'tgan token",
       "networkError": "Tarmoq xatosi. Keyinroq urinib ko'ring",
       "unknownError": "Noma'lum xatolik yuz berdi"
+    },
+    "info": {
+      "smsCode": "Telefon raqamingizga tasdiqlash uchun SMS-kod yuboriladi",
+      "didntReceiveCode": "Kod kelmadimi?",
+      "checkPhone": "Telefon raqamini tekshiring va kodni qayta yuborishga harakat qiling"
+    },
+    "helpers": {
+      "phoneFormat": "Format: +998 XX XXX XX XX"
     },
     "links": {
       "forgotPassword": "Parolni unutdingizmi?",

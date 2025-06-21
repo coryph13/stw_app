@@ -434,8 +434,10 @@
       "name": "Name",
       "login": "Login",
       "email": "Email",
+      "phone": "Phone Number",
       "password": "Password",
       "confirmPassword": "Confirm Password",
+      "code": "Verification Code",
       "newPassword": "New Password",
       "currentPassword": "Current Password"
     },
@@ -443,8 +445,10 @@
       "name": "Enter your name",
       "login": "Enter login",
       "email": "Enter email",
+      "phone": "998 XX XXX XX XX",
       "password": "Enter password",
       "confirmPassword": "Repeat password",
+      "code": "000000",
       "newPassword": "Enter new password",
       "currentPassword": "Enter current password"
     },
@@ -455,6 +459,9 @@
       "loggingIn": "Signing In...",
       "logout": "Sign Out",
       "loggingOut": "Signing Out...",
+      "verify": "Verify",
+      "verifying": "Verifying...",
+      "resendCode": "Resend Code",
       "resetPassword": "Reset Password",
       "resetting": "Resetting...",
       "updateProfile": "Update Profile",
@@ -465,6 +472,7 @@
     "titles": {
       "register": "Registration",
       "login": "Sign In",
+      "verifyCode": "Verify Phone Number",
       "resetPassword": "Password Recovery",
       "profile": "Profile",
       "editProfile": "Edit Profile"
@@ -473,6 +481,9 @@
       "registerSuccess": "Registration successful! You can now sign in.",
       "loginSuccess": "Successfully signed in",
       "logoutSuccess": "You have been signed out",
+      "codeSent": "We've sent a verification code to",
+      "resendIn": "Resend in",
+      "seconds": "sec.",
       "resetPasswordSent": "Password reset instructions have been sent to your email",
       "passwordResetSuccess": "Password successfully changed",
       "profileUpdated": "Profile successfully updated"
@@ -480,12 +491,22 @@
     "errors": {
       "passwordMismatch": "Passwords do not match",
       "passwordTooShort": "Password must be at least 6 characters",
+      "invalidPhone": "Invalid phone number format",
+      "incompleteCode": "Please enter the complete code",
       "invalidCredentials": "Invalid login or password",
-      "userExists": "User with this login already exists",
+      "userExists": "User with this phone number already exists",
       "userNotFound": "User not found",
       "invalidToken": "Invalid or expired token",
       "networkError": "Network error. Please try later",
       "unknownError": "An unknown error occurred"
+    },
+    "info": {
+      "smsCode": "An SMS code will be sent to your phone number for verification",
+      "didntReceiveCode": "Didn't receive the code?",
+      "checkPhone": "Check your phone number and try resending the code"
+    },
+    "helpers": {
+      "phoneFormat": "Format: +998 XX XXX XX XX"
     },
     "links": {
       "forgotPassword": "Forgot password?",
