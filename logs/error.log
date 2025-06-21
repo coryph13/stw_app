@@ -1,0 +1,240 @@
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:46: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:46:           ^^^^^^^
+2025-06-21T16:22:46: 
+2025-06-21T16:22:46: SyntaxError: missing ) after argument list
+2025-06-21T16:22:46:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:46:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:46:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:46:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:46:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:46:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:47: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:47:           ^^^^^^^
+2025-06-21T16:22:47: 
+2025-06-21T16:22:47: SyntaxError: missing ) after argument list
+2025-06-21T16:22:47:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:47:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:47:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:47:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:47:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:47:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:48: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:48: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:48:           ^^^^^^^
+2025-06-21T16:22:48: 
+2025-06-21T16:22:48: SyntaxError: missing ) after argument list
+2025-06-21T16:22:48:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:48:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:48:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:48:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:48:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:48:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:48:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:48:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:48:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:48:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:48: /home/user/web/stw_app/node_modules/.bin/next:2
+2025-06-21T16:22:48: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-06-21T16:22:48:           ^^^^^^^
+2025-06-21T16:22:48: 
+2025-06-21T16:22:48: SyntaxError: missing ) after argument list
+2025-06-21T16:22:48:     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+2025-06-21T16:22:48:     at Module._compile (node:internal/modules/cjs/loader:1704:20)
+2025-06-21T16:22:48:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:48:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:48:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2025-06-21T16:22:48:     at Object.<anonymous> (/home/user/.nvm/versions/node/v22.16.0/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-06-21T16:22:48:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-06-21T16:22:48:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2025-06-21T16:22:48:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-06-21T16:22:48:     at Function._load (node:internal/modules/cjs/loader:1282:12)
